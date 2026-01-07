@@ -1,0 +1,76 @@
+import Header from '@/components/Header';
+import { getAboutContent } from '@/lib/content';
+import type { Language, SocialLink } from '@/lib/types';
+import Image from 'next/image';
+
+// This is a server component
+export default async function AboutPage({ params }: { params: Promise<{ lang: Language }> }) {
+  const { lang } = await params;
+  const aboutContent = await getAboutContent(lang);
+
+  if (!aboutContent) {
+    return (
+      <div className="container-centered min-h-screen" style={{ paddingTop: '10vh', paddingBottom: '3rem' }}>
+        <Header lang={lang} showSubtitleLink />
+        <p>Content not available</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="container-centered min-h-screen" style={{ paddingTop: '10vh', paddingBottom: '3rem' }}>
+      <Header lang={lang} showSubtitleLink />
+      
+      {/* Portrait Image */}
+      <div className="about-image-container">
+        <Image
+          src={aboutContent.portrait}
+          alt="Henri Badaroh"
+          width={800}
+          height={600}
+          style={{ width: '100%', height: 'auto' }}
+          priority
+        />
+      </div>
+
+      {/* Portrait Caption */}
+      {aboutContent.portraitCaption && (
+        <p className="image-caption" style={{ marginBottom: '2rem' }}>{aboutContent.portraitCaption}</p>
+      )}
+
+      {/* Biography */}
+      <div
+        className="body-text"
+        style={{ marginBottom: '8rem' }}
+        dangerouslySetInnerHTML={{ __html: aboutContent.content }}
+      />
+
+      {/* Social Links */}
+      {aboutContent.socialLinks && aboutContent.socialLinks.length > 0 && (
+        <div className="text-left" style={{ marginBottom: '200px', fontSize: '0.7rem', fontStyle: 'italic' }}>
+          {aboutContent.socialLinks.map((link: SocialLink, index: number) => (
+            <span key={link.name}>
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-70 transition-opacity"
+              >
+                {link.name}
+              </a>
+              {index < aboutContent.socialLinks.length - 1 && ', '}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// Generate static pages for both languages
+export async function generateStaticParams() {
+  return [
+    { lang: 'en' as Language },
+    { lang: 'br' as Language },
+  ];
+}
