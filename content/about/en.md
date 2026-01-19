@@ -1,15 +1,23 @@
 ---
 portrait: /portrait.jpg
-portraitCaption: "Fig 1. Portrait by Martin Simonic (2023)"
+portraitCaption: "Fig 1. Portrait by Marisol Mendez (2024)"
 socialLinks:
-  - name: Facebook
-    url: https://facebook.com/henribadaroh
+  - name: Email
+    url: mailto:work@henribadaroh.com
   - name: Instagram
-    url: https://instagram.com/henribadaroh
-  - name: Are.na
-    url: https://are.na/henri-badaroh
+    url: https://www.instagram.com/hnrbdrh/
+  - name: CV
+    url: https://drive.google.com/file/d/1IeWt8IZtQtFxAEHfRY2Rw4TkRpHnKTMO/edit
 ---
+
+Henri Badaröh is a Brazilian visual artist and writer.
 
 Through queer, decolonial and intersectional approaches, he focuses on the dialogues between photography and film, analogue creative practices and new media, image and written word, Europe and America.
 
-Henri took a master's degree in Film and Photographic Studies from Leiden University in 2019 after having completed a BA in Photography in São Paulo. He lives and works in The Netherlands, and frequently collaborates with multidisciplinary artists for publications and performances worldwide.
+Based in the Netherlands, Henri has been active in the arts and culture field for the past seven years, collaborating with multidisciplinary artists on publications and performances worldwide. He has also conducted portfolio reviews and mentoring sessions for World Press Photo, FUTURES Photography, Foam Amsterdam, Fomu Antwerp, and the Royal Academy of Art (KABK), amongst others.
+He holds an MA in Film and Photographic Studies from Leiden University (2019) and a BA in Photography from São Paulo.
+
+**ASSETS**
+
+[Self-portrait](/HAL_9000.gif) [2018]
+

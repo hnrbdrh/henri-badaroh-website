@@ -72,6 +72,7 @@ export async function getProjectsByChapter(lang: Language): Promise<Record<Chapt
     'ii': [],
     'iii': [],
     'iv': [],
+    'v': [],
   };
 
   allProjects.forEach(project => {

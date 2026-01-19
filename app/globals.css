@@ -134,6 +134,33 @@ a {
   display: block;
 }
 
+/* Video embed styles - same treatment as images */
+.video-figure {
+  width: 70%;
+  margin: 2rem auto;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-figure iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-caption {
+  width: 100%;
+  margin: 0.5rem auto 0;
+  text-align: center;
+  font-size: 0.55rem;
+  line-height: 1.5;
+}
+
 .about-image-container {
   width: 70%;
   margin: 2rem auto 0.5rem;
@@ -155,11 +182,15 @@ a {
   .about-image-container {
     width: 100%;
   }
+
+  .video-figure {
+    width: 100%;
+  }
 }
 
 /* Typography */
 .title-text {
-  font-size: 0.7rem;
+  font-size: 0.805rem;
   line-height: 1.2;
   text-align: center;
   margin-bottom: 0.2rem;
@@ -168,16 +199,18 @@ a {
 }
 
 .subtitle-text {
-  font-size: 0.7rem;
+  font-size: 0.805rem;
   line-height: 1.3;
   text-align: center;
   margin-bottom: 3rem;
-  font-style: italic;
+  font-style: normal;
+  font-variant: common-ligatures small-caps;
+  letter-spacing: 0;
 }
 
 .body-text {
-  font-size: 0.7rem;
-  line-height: 1.4;
+  font-size: 0.805rem;
+  line-height: 1.12;
   margin-bottom: 1.5rem;
 }
 
@@ -189,13 +222,36 @@ a {
   margin-bottom: 0;
 }
 
+
+/* ASSETS section styling */
+.body-text strong {
+  font-size: 0.55rem;
+  font-weight: normal;
+  display: block;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Links in ASSETS section (following strong tags) should be underlined */
+.body-text strong + p a,
+.body-text strong ~ p a {
+  text-decoration: underline;
+}
+
+/* Asset links paragraph should be smaller, like captions */
+.body-text strong + p,
+.body-text strong ~ p {
+  font-size: 0.55rem;
+  line-height: 1.5;
+}
+
 /* Chapter menu */
 .chapter-item {
   display: flex;
   align-items: baseline;
-  font-size: 0.75rem;
+  font-size: 0.8625rem;
   line-height: 0.84;
-  margin: 0.05rem 0;
+  margin: 0.055rem 0;
   cursor: pointer;
   font-variant: common-ligatures small-caps;
   letter-spacing: 0;
@@ -228,7 +284,7 @@ a {
   font-variant: common-ligatures small-caps;
   letter-spacing: 0;
   margin-right: 0.2rem;
-  font-size: 0.75rem;
+  font-size: 0.8625rem;
 }
 
 .project-title {

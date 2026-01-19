@@ -9,18 +9,12 @@ interface HeaderProps {
 }
 
 const subtitles = {
-  en: { before: 'Brazilian visual artist ', ampersand: '&', after: ' writer' },
-  br: { before: 'Artista visual ', ampersand: '&', after: ' escritor brasileiro' },
+  en: 'brazilian visual artist & writer',
+  br: 'artista visual & escritor brasileiro',
 };
 
 export default function Header({ lang, showSubtitleLink = false }: HeaderProps) {
-  const subtitle = (
-    <>
-      {subtitles[lang].before}
-      <span style={{ fontVariant: 'all-small-caps' }}>{subtitles[lang].ampersand}</span>
-      {subtitles[lang].after}
-    </>
-  );
+  const subtitle = subtitles[lang];
 
   return (
     <header className="mb-12 text-center">

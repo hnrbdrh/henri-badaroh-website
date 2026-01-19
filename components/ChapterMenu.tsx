@@ -3,6 +3,7 @@
 import { chapters } from '@/lib/chapters';
 import type { Language, Chapter } from '@/lib/types';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 interface ChapterMenuProps {
   lang: Language;
@@ -10,11 +11,16 @@ interface ChapterMenuProps {
 
 export default function ChapterMenu({ lang }: ChapterMenuProps) {
   const [hoveredChapter, setHoveredChapter] = useState<string | null>(null);
+  const router = useRouter();
 
-  const scrollToChapter = (chapterId: Chapter) => {
-    const element = document.getElementById(`chapter-${chapterId}`);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const handleChapterClick = (chapterId: Chapter) => {
+    if (chapterId === 'v') {
+      router.push(`/${lang}/about`);
+    } else {
+      const element = document.getElementById(`chapter-${chapterId}`);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   };
 
@@ -24,7 +30,7 @@ export default function ChapterMenu({ lang }: ChapterMenuProps) {
         <div
           key={chapter.id}
           className={`chapter-item hover-item ${hoveredChapter && hoveredChapter !== chapter.id ? 'opacity-30' : ''}`}
-          onClick={() => scrollToChapter(chapter.id)}
+          onClick={() => handleChapterClick(chapter.id)}
           onMouseEnter={() => setHoveredChapter(chapter.id)}
           onMouseLeave={() => setHoveredChapter(null)}
         >
