@@ -19,5 +19,5 @@ He holds an MA in Film and Photographic Studies from Leiden University (2019) an
 
 **ASSETS**
 
-[Self-portrait](/HAL_9000.gif) [2018]
+<p style="font-size: 0.55rem; line-height: 1.5;"><a href="/HAL_9000.gif" style="text-decoration: underline; font-style: italic;">Self-portrait</a> [2018]</p>
 

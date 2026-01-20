@@ -17,9 +17,9 @@
 */
 :root {
   /* Colors - change these to update site-wide */
-  --color-text: #000000;
-  --color-text-grey: rgba(0, 0, 0, 0.3);
-  --color-background: #ffffff;
+  --color-text: #7F0B00;
+  --color-text-grey: rgba(127, 11, 0, 0.3);
+  --color-background: #FBFBFB;
 
   /* Font - change to your preferred serif font */
   --font-serif: 'Garamond Premier Pro', Georgia, 'Times New Roman', serif;
@@ -112,10 +112,11 @@ a {
 
 /* Dotted line style for project listings */
 .dotted-line {
-  flex: 1;
+  flex: 1 1 auto;
   overflow: hidden;
   white-space: nowrap;
   margin: 0 0.2rem 0 0.8rem;
+  min-width: 2rem;
 }
 
 .dotted-line::before {
@@ -132,6 +133,12 @@ a {
 .project-image {
   width: 100%;
   display: block;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.project-image:hover {
+  filter: grayscale(0%);
 }
 
 /* Video embed styles - same treatment as images */
@@ -200,12 +207,25 @@ a {
 
 .subtitle-text {
   font-size: 0.805rem;
-  line-height: 1.3;
+  line-height: 0.936;
   text-align: center;
   margin-bottom: 3rem;
   font-style: normal;
   font-variant: common-ligatures small-caps;
   letter-spacing: 0;
+}
+
+.subtitle-text .normal-text {
+  font-variant: normal;
+}
+
+.subtitle-text .italic-text {
+  font-variant: normal;
+  font-style: italic;
+}
+
+.subtitle-text .small-paren {
+  font-size: 0.65rem;
 }
 
 .body-text {
@@ -216,6 +236,7 @@ a {
 
 .body-text p {
   margin-bottom: 0.7rem;
+  font-size: 0.805rem;
 }
 
 .body-text p:last-child {
@@ -229,20 +250,22 @@ a {
   font-weight: normal;
   display: block;
   margin-top: 3rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Links in ASSETS section (following strong tags) should be underlined */
-.body-text strong + p a,
-.body-text strong ~ p a {
-  text-decoration: underline;
+  margin-bottom: 0.2rem;
 }
 
 /* Asset links paragraph should be smaller, like captions */
 .body-text strong + p,
 .body-text strong ~ p {
-  font-size: 0.55rem;
-  line-height: 1.5;
+  font-size: 0.55rem !important;
+  line-height: 1.5 !important;
+  margin-bottom: 0.7rem !important;
+}
+
+/* Links in ASSETS section (following strong tags) should be underlined */
+.body-text strong + p a,
+.body-text strong ~ p a {
+  text-decoration: underline !important;
+  font-size: 0.55rem !important;
 }
 
 /* Chapter menu */
@@ -298,16 +321,28 @@ a {
   margin-left: 0;
 }
 
-.dotted-line {
-  flex: 1;
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 0 0.2rem 0 0.8rem;
-}
+@media (max-width: 900px) {
+  .container-centered {
+    width: 98vw;
+    padding: 0 1rem;
+  }
 
-.dotted-line::before {
-  content: '..........................................................................................................................................................................................................................................................';
-  letter-spacing: 0.6em;
+  .chapter-section {
+    margin-top: 2rem;
+  }
+
+  .chapter-section .project-item:first-child .chapter-number {
+    position: absolute;
+    transform: translateY(-1.2rem);
+  }
+
+  .chapter-section .project-item:first-child {
+    margin-top: 1.2rem;
+  }
+
+  .chapter-section .project-item:not(:first-child) .chapter-number {
+    display: none;
+  }
 }
 
 /* Back button */
@@ -316,7 +351,7 @@ a {
   top: 2rem;
   left: 2rem;
   cursor: pointer;
-  font-size: 0.7rem;
+  font-size: 0.98rem;
   z-index: 100;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -344,8 +379,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
-  margin-top: 4rem;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .language-image {
@@ -353,6 +388,11 @@ a {
   width: 100%;
   height: auto;
   flex-shrink: 0;
+  transition: filter 0.5s ease;
+}
+
+.language-image.grayscale {
+  filter: grayscale(100%);
 }
 
 .language-button {
@@ -434,5 +474,49 @@ a {
   }
   to {
     transform: translateX(0);
+  }
+}
+
+/* Screensaver styles */
+.screensaver-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.screensaver-frog {
+  position: absolute;
+  opacity: 0;
+  animation: frogFadeIn 0.5s ease-in forwards;
+  pointer-events: none;
+}
+
+.screensaver-frog.fade-out {
+  animation: frogFadeOut 0.8s ease-out forwards;
+}
+
+@keyframes frogFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) var(--frog-rotation);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) var(--frog-rotation);
+  }
+}
+
+@keyframes frogFadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1) var(--frog-rotation);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8) var(--frog-rotation);
   }
 }

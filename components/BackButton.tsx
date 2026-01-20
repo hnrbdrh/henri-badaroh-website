@@ -10,7 +10,7 @@ export default function BackButton() {
       className="back-button visible"
       onClick={() => router.back()}
     >
-      Back
+      ←
     </button>
   );
 }

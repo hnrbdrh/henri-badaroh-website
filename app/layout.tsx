@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Screensaver from '@/components/Screensaver'
 
 export const metadata: Metadata = {
   title: 'Henri Badaroh - Brazilian Visual Artist and Writer',
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Screensaver />
+      </body>
     </html>
   )
 }

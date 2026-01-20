@@ -9,8 +9,24 @@ interface HeaderProps {
 }
 
 const subtitles = {
-  en: 'brazilian visual artist & writer',
-  br: 'artista visual & escritor brasileiro',
+  en: (
+    <>
+      editor & writer <span className="italic-text">of</span> <span className="italic-text">essays</span> & <span className="italic-text">crônicas</span>,
+      <br />
+      visual artist,
+      <br />
+      t<span className="small-paren">(</span><span className="italic-text">h</span><span className="small-paren">)</span>inker
+    </>
+  ),
+  br: (
+    <>
+      editor & escritor <span className="italic-text">de</span> <span className="italic-text">ensaios</span> & <span className="italic-text">crônicas</span>,
+      <br />
+      artista visual,
+      <br />
+      pensador(a)
+    </>
+  ),
 };
 
 export default function Header({ lang, showSubtitleLink = false }: HeaderProps) {
@@ -19,7 +35,7 @@ export default function Header({ lang, showSubtitleLink = false }: HeaderProps) 
   return (
     <header className="mb-12 text-center">
       <Link href={`/${lang}/about`} className="hover:opacity-70 transition-opacity">
-        <h1 className="title-text">henri badaröh</h1>
+        <h1 className="title-text">Henri Badaröh</h1>
       </Link>
 
       {showSubtitleLink ? (

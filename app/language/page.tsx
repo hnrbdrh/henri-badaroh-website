@@ -14,7 +14,16 @@ export default function LanguagePage() {
 
   return (
     <div className="language-page-container">
-      <h1 className="title-text">Henri Badaröh</h1>
+      <header className="mb-12 text-center">
+        <h1 className="title-text">Henri Badaröh</h1>
+        <p className="subtitle-text">
+          editor & writer <span className="italic-text">of</span> <span className="italic-text">essays</span> & <span className="italic-text">crônicas</span>,
+          <br />
+          visual artist,
+          <br />
+          t<span className="small-paren">(</span><span className="italic-text">h</span><span className="small-paren">)</span>inker
+        </p>
+      </header>
 
       <div className="language-selection-wrapper">
         <button
@@ -26,7 +35,7 @@ export default function LanguagePage() {
           English
         </button>
 
-        <div className="language-image">
+        <div className={`language-image ${hoveredLang ? 'grayscale' : ''}`}>
           <Image
             src="/frog.png"
             alt="Frog"

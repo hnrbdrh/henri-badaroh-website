@@ -19,5 +19,5 @@ Ele possui mestrado em Estudos de Cinema e Fotografia pela Universidade de Leide
 
 **ATIVOS**
 
-[Autorretrato](/HAL_9000.gif) [2018]
+<p style="font-size: 0.55rem; line-height: 1.5;"><a href="/HAL_9000.gif" style="text-decoration: underline; font-style: italic;">Autorretrato</a> [2018]</p>
 
