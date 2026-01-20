@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
 import type { Language } from '@/lib/types';
 
 interface HeaderProps {
@@ -31,20 +32,38 @@ const subtitles = {
 
 export default function Header({ lang, showSubtitleLink = false }: HeaderProps) {
   const subtitle = subtitles[lang];
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleLanguageSwitch = () => {
+    const newLang = lang === 'en' ? 'br' : 'en';
+    const newPath = pathname.replace(/^\/(en|br)/, `/${newLang}`);
+    router.push(newPath);
+  };
+
+  const otherLanguageLabel = lang === 'en' ? 'brasileira' : 'english';
 
   return (
-    <header className="mb-12 text-center">
-      <Link href={`/${lang}/about`} className="hover:opacity-70 transition-opacity">
-        <h1 className="title-text">Henri Badaröh</h1>
-      </Link>
-
-      {showSubtitleLink ? (
-        <Link href={`/${lang}`} className="hover:opacity-70 transition-opacity">
-          <p className="subtitle-text">{subtitle}</p>
+    <>
+      <button
+        onClick={handleLanguageSwitch}
+        className="language-switcher"
+      >
+        {otherLanguageLabel}
+      </button>
+      <header className="mb-12 text-center">
+        <Link href={`/${lang}/about`} className="hover:opacity-70 transition-opacity">
+          <h1 className="title-text">Henri Badaröh</h1>
         </Link>
-      ) : (
-        <p className="subtitle-text">{subtitle}</p>
-      )}
-    </header>
+
+        {showSubtitleLink ? (
+          <Link href={`/${lang}`} className="hover:opacity-70 transition-opacity">
+            <p className="subtitle-text">{subtitle}</p>
+          </Link>
+        ) : (
+          <p className="subtitle-text">{subtitle}</p>
+        )}
+      </header>
+    </>
   );
 }
