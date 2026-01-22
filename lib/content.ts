@@ -3,22 +3,35 @@ import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
 import type { Project, ProjectMetadata, Language, Chapter } from './types';
+import { chapters } from './chapters';
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
 // Configure marked renderer to add classes to images and captions
 const renderer = new marked.Renderer();
 renderer.image = (href, title, text) => {
+  // Convert *text* to <em>text</em> for italic formatting in captions
+  let formattedCaption = text.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+  // Convert [text](url) to links that open in new tab
+  formattedCaption = formattedCaption.replace(
+    /\[([^\]]+)\]\(([^)]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+  );
   return `<figure class="image-figure">
     <img src="${href}" alt="${text}" class="project-image" ${title ? `title="${title}"` : ''} />
-    <figcaption class="image-caption">${text}</figcaption>
+    <figcaption class="image-caption">${formattedCaption}</figcaption>
   </figure>`;
+};
+
+// Make all links open in a new tab
+renderer.link = (href, title, text) => {
+  return `<a href="${href}" target="_blank" rel="noopener noreferrer"${title ? ` title="${title}"` : ''}>${text}</a>`;
 };
 
 marked.setOptions({ renderer });
 
-// Re-export chapters from the separate file (for backward compatibility)
-export { chapters } from './chapters';
+// Re-export chapters for backward compatibility
+export { chapters };
 
 // Get all projects for a specific language
 export async function getAllProjects(lang: Language): Promise<Project[]> {
@@ -66,17 +79,17 @@ export async function getAllProjects(lang: Language): Promise<Project[]> {
 // Get projects grouped by chapter
 export async function getProjectsByChapter(lang: Language): Promise<Record<Chapter, Project[]>> {
   const allProjects = await getAllProjects(lang);
-  
-  const grouped: Record<Chapter, Project[]> = {
-    'i': [],
-    'ii': [],
-    'iii': [],
-    'iv': [],
-    'v': [],
-  };
+
+  // Initialize grouped object dynamically from chapters array
+  const grouped = {} as Record<Chapter, Project[]>;
+  chapters.forEach(chapter => {
+    grouped[chapter.id] = [];
+  });
 
   allProjects.forEach(project => {
-    grouped[project.metadata.chapter].push(project);
+    if (grouped[project.metadata.chapter]) {
+      grouped[project.metadata.chapter].push(project);
+    }
   });
 
   return grouped;

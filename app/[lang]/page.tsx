@@ -12,7 +12,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Lan
   return (
     <div className="container-centered min-h-screen" style={{ paddingTop: '10vh', paddingBottom: '3rem' }}>
       <Header lang={lang} />
-      <ChapterMenu lang={lang} />
+      <ChapterMenu lang={lang} projectsByChapter={projectsByChapter} />
       <ProjectList projectsByChapter={projectsByChapter} lang={lang} />
     </div>
   );

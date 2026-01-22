@@ -7,4 +7,5 @@ export const chapters: ChapterInfo[] = [
   { id: 'iii', title: { en: 'iii. speaking', br: 'iii. palestras' } },
   { id: 'iv', title: { en: 'iv. writing', br: 'iv. escrita' } },
   { id: 'v', title: { en: 'v. biography', br: 'v. biografia' } },
+  { id: 'vi', title: { en: 'vi. xyz', br: 'vi. xyz' } },
 ];

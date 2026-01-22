@@ -2,7 +2,7 @@
 
 export type Language = 'en' | 'br';
 
-export type Chapter = 'i' | 'ii' | 'iii' | 'iv' | 'v';
+export type Chapter = 'i' | 'ii' | 'iii' | 'iv' | 'v' | "vi";
 
 export interface ProjectMetadata {
   title: string;

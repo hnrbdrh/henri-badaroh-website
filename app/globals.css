@@ -243,6 +243,9 @@ a {
   margin-bottom: 0;
 }
 
+.body-text a {
+  text-decoration: underline;
+}
 
 /* ASSETS section styling */
 .body-text strong {
