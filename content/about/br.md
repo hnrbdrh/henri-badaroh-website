@@ -1,6 +1,6 @@
 ---
 portrait: /portrait.jpg
-portraitCaption: "Fig 1. Retrato por Marisol Mendez (2024)"
+portraitCaption: "<em>Fig 1.</em> Retrato por Marisol Mendez (2024)"
 socialLinks:
   - name: Email
     url: mailto:work@henribadaroh.com

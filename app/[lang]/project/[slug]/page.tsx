@@ -26,9 +26,8 @@ export default async function ProjectPage({
 
         <main className="page-content">
           {/* Project Title with Year */}
-          <ul className="leaders" style={{ marginBottom: '4rem' }}>
+          <ul className="leaders project-page-title" style={{ marginBottom: '4rem' }}>
             <li className="project-item">
-              <span className="chapter-number">{'\u00A0\u00A0\u00A0\u00A0'}</span>
               <span className="project-title">{project.metadata.title}</span>
               <span className="project-year">{project.metadata.year}</span>
             </li>

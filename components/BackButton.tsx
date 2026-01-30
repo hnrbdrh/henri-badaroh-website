@@ -6,9 +6,11 @@ import type { Language } from '@/lib/types';
 
 interface BackButtonProps {
   lang: Language;
+  showBackButton?: boolean;
+  showScrollToTop?: boolean;
 }
 
-export default function BackButton({ lang }: BackButtonProps) {
+export default function BackButton({ lang, showBackButton = true, showScrollToTop = true }: BackButtonProps) {
   const router = useRouter();
   const pathname = usePathname();
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -47,13 +49,15 @@ export default function BackButton({ lang }: BackButtonProps) {
 
   return (
     <>
-      <button
-        className={`back-button ${hasScrolled ? 'visible' : ''}`}
-        onClick={() => router.push(`/${lang}`)}
-        aria-label="Back to home"
-      >
-        ↑
-      </button>
+      {showBackButton && (
+        <button
+          className={`back-button ${hasScrolled ? 'visible' : ''}`}
+          onClick={() => router.push(`/${lang}`)}
+          aria-label="Back to home"
+        >
+          ↑
+        </button>
+      )}
       {/* Language flag - visible when not scrolled */}
       <button
         className={`language-flag-button ${!hasScrolled ? 'visible' : ''}`}
@@ -63,13 +67,15 @@ export default function BackButton({ lang }: BackButtonProps) {
         {otherLanguageFlag}
       </button>
       {/* Scroll to top - visible when scrolled, replaces flag */}
-      <button
-        className={`scroll-top-button ${hasScrolled ? 'visible' : ''}`}
-        onClick={scrollToTop}
-        aria-label="Scroll to top"
-      >
-        ↑
-      </button>
+      {showScrollToTop && (
+        <button
+          className={`scroll-top-button ${hasScrolled ? 'visible' : ''}`}
+          onClick={scrollToTop}
+          aria-label="Scroll to top"
+        >
+          ↑
+        </button>
+      )}
     </>
   );
 }

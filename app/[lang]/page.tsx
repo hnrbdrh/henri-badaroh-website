@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import ChapterMenu from '@/components/ChapterMenu';
 import ProjectList from '@/components/ProjectList';
+import BackButton from '@/components/BackButton';
 import { getProjectsByChapter } from '@/lib/content';
 import type { Language } from '@/lib/types';
 
@@ -10,13 +11,16 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Lan
   const projectsByChapter = await getProjectsByChapter(lang);
 
   return (
-    <div className="container-centered min-h-screen page-wrapper" style={{ paddingTop: '14vh', paddingBottom: '3rem' }}>
-      <Header lang={lang} />
-      <main className="page-content">
-        <ChapterMenu lang={lang} projectsByChapter={projectsByChapter} />
-        <ProjectList projectsByChapter={projectsByChapter} lang={lang} />
-      </main>
-    </div>
+    <>
+      <BackButton lang={lang} showBackButton={false} showScrollToTop={false} />
+      <div className="container-centered min-h-screen page-wrapper" style={{ paddingTop: '14vh', paddingBottom: '3rem' }}>
+        <Header lang={lang} showLanguageFlag={false} />
+        <main className="page-content">
+          <ChapterMenu lang={lang} projectsByChapter={projectsByChapter} />
+          <ProjectList projectsByChapter={projectsByChapter} lang={lang} />
+        </main>
+      </div>
+    </>
   );
 }
 

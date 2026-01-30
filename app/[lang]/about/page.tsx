@@ -1,4 +1,5 @@
 import Header from '@/components/Header';
+import BackButton from '@/components/BackButton';
 import { getAboutContent } from '@/lib/content';
 import type { Language, SocialLink } from '@/lib/types';
 import Image from 'next/image';
@@ -18,10 +19,12 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: La
   }
 
   return (
-    <div className="container-centered min-h-screen page-wrapper" style={{ paddingTop: '14vh', paddingBottom: '3rem' }}>
-      <Header lang={lang} showSubtitleLink />
+    <>
+      <BackButton lang={lang} showBackButton={false} showScrollToTop={false} />
+      <div className="container-centered min-h-screen page-wrapper" style={{ paddingTop: '14vh', paddingBottom: '3rem' }}>
+        <Header lang={lang} showSubtitleLink showLanguageFlag={false} />
 
-      <main className="page-content">
+        <main className="page-content">
         {/* Portrait Image */}
         <div className="about-image-container">
           <Image
@@ -36,7 +39,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: La
 
         {/* Portrait Caption */}
         {aboutContent.portraitCaption && (
-          <p className="image-caption" style={{ marginBottom: '2rem' }}>{aboutContent.portraitCaption}</p>
+          <p className="image-caption" style={{ marginBottom: '2rem' }} dangerouslySetInnerHTML={{ __html: aboutContent.portraitCaption }} />
         )}
 
         {/* Biography (before ASSETS) */}
@@ -90,6 +93,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: La
         })()}
       </main>
     </div>
+    </>
   );
 }
 

@@ -14,7 +14,7 @@ interface HeaderProps {
 const subtitles = {
   en: (
     <>
-      editor & writer <span className="italic-text">of</span> <span className="italic-text">essays</span> & <span className="italic-text">crônicas</span>,
+      editor & writer <span className="italic-text">of</span> <span className="italic-text">essays</span> <span className="italic-text">&</span> <span className="italic-text">crônicas</span>,
       <br />
       visual artist,
       <br />
@@ -23,7 +23,7 @@ const subtitles = {
   ),
   br: (
     <>
-      editor & escritor <span className="italic-text">de</span> <span className="italic-text">ensaios</span> & <span className="italic-text">crônicas</span>,
+      editor & escritor <span className="italic-text">de</span> <span className="italic-text">ensaios</span> <span className="italic-text">&</span> <span className="italic-text">crônicas</span>,
       <br />
       artista visual,
       <br />

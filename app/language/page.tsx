@@ -13,7 +13,7 @@ export default function LanguagePage() {
   };
 
   return (
-    <div className="language-page-container">
+    <div className="container-centered min-h-screen" style={{ paddingTop: '14vh', paddingBottom: '3rem' }}>
       <header className="mb-12 text-center">
         <h1 className="title-text">henri badaröh</h1>
       </header>
