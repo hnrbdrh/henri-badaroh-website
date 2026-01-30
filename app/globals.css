@@ -373,9 +373,9 @@ ul.leaders li.faded::before {
 .chapter-item {
   display: flex;
   align-items: baseline;
-  font-size: 0.95rem;
-  line-height: 1.15;
-  margin: 0.1rem 0;
+  font-size: 0.8625rem;
+  line-height: 0.924;
+  margin: 0.055rem 0;
   cursor: pointer;
   font-variant: common-ligatures small-caps;
   letter-spacing: 0;
