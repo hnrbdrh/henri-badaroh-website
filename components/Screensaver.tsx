@@ -46,7 +46,7 @@ export default function Screensaver() {
     const checkInactivity = setInterval(() => {
       const timeSinceActivity = Date.now() - lastActivity;
 
-      if (timeSinceActivity > 25000 && !isActive) {
+      if (timeSinceActivity > 300000 && !isActive) { // 5 minutes
         setIsActive(true);
         setScreensaverStartTime(Date.now());
       }
@@ -100,8 +100,8 @@ export default function Screensaver() {
           }}
         >
           <Image
-            src="/frog.png"
-            alt="Frog"
+            src="/screensaver.png"
+            alt="Screensaver"
             width={frog.size}
             height={frog.size}
             style={{ width: '100%', height: 'auto' }}

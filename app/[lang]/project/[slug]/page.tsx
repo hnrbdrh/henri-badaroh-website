@@ -19,23 +19,27 @@ export default async function ProjectPage({
 
   return (
     <>
-      <BackButton />
+      <BackButton lang={lang} />
 
-      <div className="container-centered min-h-screen" style={{ paddingTop: '10vh', paddingBottom: '3rem' }}>
-        <Header lang={lang} showSubtitleLink />
-        
-        {/* Project Title with Year */}
-        <div className="project-item justify-center" style={{ marginBottom: '4rem' }}>
-          <span className="project-title">{project.metadata.title}</span>
-          <span className="dotted-line"></span>
-          <span className="project-year">{project.metadata.year}</span>
-        </div>
+      <div className="container-centered min-h-screen page-wrapper" style={{ paddingTop: '14vh', paddingBottom: '3rem' }}>
+        <Header lang={lang} showSubtitleLink showLanguageFlag={false} />
 
-        {/* Project Content */}
-        <div 
-          className="body-text"
-          dangerouslySetInnerHTML={{ __html: project.content }}
-        />
+        <main className="page-content">
+          {/* Project Title with Year */}
+          <ul className="leaders" style={{ marginBottom: '4rem' }}>
+            <li className="project-item">
+              <span className="chapter-number">{'\u00A0\u00A0\u00A0\u00A0'}</span>
+              <span className="project-title">{project.metadata.title}</span>
+              <span className="project-year">{project.metadata.year}</span>
+            </li>
+          </ul>
+
+          {/* Project Content */}
+          <div
+            className="body-text"
+            dangerouslySetInnerHTML={{ __html: project.content }}
+          />
+        </main>
       </div>
     </>
   );

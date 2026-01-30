@@ -10,10 +10,12 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Lan
   const projectsByChapter = await getProjectsByChapter(lang);
 
   return (
-    <div className="container-centered min-h-screen" style={{ paddingTop: '10vh', paddingBottom: '3rem' }}>
+    <div className="container-centered min-h-screen page-wrapper" style={{ paddingTop: '14vh', paddingBottom: '3rem' }}>
       <Header lang={lang} />
-      <ChapterMenu lang={lang} projectsByChapter={projectsByChapter} />
-      <ProjectList projectsByChapter={projectsByChapter} lang={lang} />
+      <main className="page-content">
+        <ChapterMenu lang={lang} projectsByChapter={projectsByChapter} />
+        <ProjectList projectsByChapter={projectsByChapter} lang={lang} />
+      </main>
     </div>
   );
 }

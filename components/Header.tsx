@@ -2,11 +2,13 @@
 
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
+import { useState } from 'react';
 import type { Language } from '@/lib/types';
 
 interface HeaderProps {
   lang: Language;
   showSubtitleLink?: boolean;
+  showLanguageFlag?: boolean;
 }
 
 const subtitles = {
@@ -30,38 +32,68 @@ const subtitles = {
   ),
 };
 
-export default function Header({ lang, showSubtitleLink = false }: HeaderProps) {
+export default function Header({ lang, showSubtitleLink = false, showLanguageFlag = true }: HeaderProps) {
   const subtitle = subtitles[lang];
   const router = useRouter();
   const pathname = usePathname();
+  const [hoveredElement, setHoveredElement] = useState<'title' | 'subtitle' | null>(null);
 
   const handleLanguageSwitch = () => {
     const newLang = lang === 'en' ? 'br' : 'en';
     const newPath = pathname.replace(/^\/(en|br)/, `/${newLang}`);
+    // Save current scroll position
+    const scrollPos = window.scrollY;
     router.push(newPath);
+    // Restore scroll position after navigation
+    setTimeout(() => {
+      window.scrollTo(0, scrollPos);
+    }, 100);
   };
 
-  const otherLanguageLabel = lang === 'en' ? 'brasileira' : 'english';
+  // Show the flag for the OTHER language (the one to switch to)
+  const otherLanguageFlag = lang === 'en' ? '🇧🇷' : '🇬🇧';
 
   return (
     <>
-      <button
-        onClick={handleLanguageSwitch}
-        className="language-switcher"
-      >
-        {otherLanguageLabel}
-      </button>
-      <header className="mb-12 text-center">
-        <Link href={`/${lang}/about`} className="hover:opacity-70 transition-opacity">
-          <h1 className="title-text">Henri Badaröh</h1>
+      {showLanguageFlag && (
+        <button
+          onClick={handleLanguageSwitch}
+          className="language-flag-button visible"
+          aria-label={lang === 'en' ? 'Switch to Portuguese' : 'Switch to English'}
+        >
+          {otherLanguageFlag}
+        </button>
+      )}
+      <header className="mb-12 text-center header-hover-group">
+        <Link
+          href={`/${lang}/about`}
+          className="header-title-link transition-opacity"
+          style={{ opacity: hoveredElement === 'subtitle' ? 0.3 : 1 }}
+          onMouseEnter={() => setHoveredElement('title')}
+          onMouseLeave={() => setHoveredElement(null)}
+        >
+          <h1 className="title-text">henri badaröh</h1>
         </Link>
 
         {showSubtitleLink ? (
-          <Link href={`/${lang}`} className="hover:opacity-70 transition-opacity">
+          <Link
+            href={`/${lang}`}
+            className="header-subtitle-link transition-opacity"
+            style={{ opacity: hoveredElement === 'title' ? 0.3 : 1 }}
+            onMouseEnter={() => setHoveredElement('subtitle')}
+            onMouseLeave={() => setHoveredElement(null)}
+          >
             <p className="subtitle-text">{subtitle}</p>
           </Link>
         ) : (
-          <p className="subtitle-text">{subtitle}</p>
+          <p
+            className="subtitle-text header-subtitle-link"
+            style={{ opacity: hoveredElement === 'title' ? 0.3 : 1 }}
+            onMouseEnter={() => setHoveredElement('subtitle')}
+            onMouseLeave={() => setHoveredElement(null)}
+          >
+            {subtitle}
+          </p>
         )}
       </header>
     </>

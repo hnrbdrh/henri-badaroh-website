@@ -15,14 +15,7 @@ export default function LanguagePage() {
   return (
     <div className="language-page-container">
       <header className="mb-12 text-center">
-        <h1 className="title-text">Henri Badaröh</h1>
-        <p className="subtitle-text">
-          editor & writer <span className="italic-text">of</span> <span className="italic-text">essays</span> & <span className="italic-text">crônicas</span>,
-          <br />
-          visual artist,
-          <br />
-          t<span className="small-paren">(</span><span className="italic-text">h</span><span className="small-paren">)</span>inker
-        </p>
+        <h1 className="title-text">henri badaröh</h1>
       </header>
 
       <div className="language-selection-wrapper">
@@ -39,10 +32,10 @@ export default function LanguagePage() {
           <Image
             src="/frog.png"
             alt="Frog"
-            width={300}
-            height={300}
+            width={150}
+            height={150}
             priority
-            style={{ width: '100%', height: 'auto' }}
+            style={{ width: '100%', height: 'auto', maxWidth: '150px' }}
           />
         </div>
 

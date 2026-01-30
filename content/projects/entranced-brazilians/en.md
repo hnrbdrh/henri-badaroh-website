@@ -9,8 +9,6 @@ Loosely inspired by Glauber Rocha’s seminal work, the film Entranced Earth (Te
 
 ![*Fig 1.* Photo by [John Smith](https://example.com)](/projects/entranced-brazilians/images/image1.png)
 
-![*Fig 1.* Photo by ([John Smith](https://example.com) 2019)](/projects/entranced-brazilians/images/image1.png)
-
 *Fig 1.* Oito modelos apresentando propostas especulativas para Skeppsbron em Estocolmo destacam diferentes abordagens representacionais e posições (Julian Dehlin, 2019). Cortesia de AADes.
 
 Read more about this project on [my website](https://example.com).

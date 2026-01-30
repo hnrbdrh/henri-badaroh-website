@@ -2,13 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom font */
+/* Custom fonts */
 @font-face {
   font-family: 'Garamond Premier Pro';
   src: url('/fonts/GaramondPremrPro-Capt.woff') format('woff'),
        url('/fonts/GaramondPremrPro-Capt.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Junicode';
+  src: url('/fonts/Junicode.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Junicode';
+  src: url('/fonts/Junicode-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Junicode';
+  src: url('/fonts/Junicode-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Junicode';
+  src: url('/fonts/Junicode-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
 }
 
 /*
@@ -25,7 +53,7 @@
   --font-serif: 'Garamond Premier Pro', Georgia, 'Times New Roman', serif;
 
   /* Layout spacing */
-  --content-max-width: 1050px;
+  --content-max-width: 1200px;
   --margin-desktop: 10%;
   --margin-tablet: 8%;
   --margin-mobile: 5%;
@@ -110,18 +138,76 @@ a {
   transition: opacity 0.2s ease;
 }
 
-/* Dotted line style for project listings */
-.dotted-line {
-  flex: 1 1 auto;
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 0 0.2rem 0 0.8rem;
-  min-width: 2rem;
+/* Page wrapper and content */
+.page-wrapper {
+  position: relative;
 }
 
-.dotted-line::before {
-  content: '..........................................................................................................................................................................................................................................................';
-  letter-spacing: 0.6em;
+.header-title-link,
+.header-subtitle-link {
+  transition: opacity 0.2s ease;
+}
+
+/* Fade transition for page content */
+.page-content {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Grid-aligned dot leaders */
+ul.leaders {
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+ul.leaders li::before {
+  float: left;
+  width: 0;
+  white-space: nowrap;
+  letter-spacing: 0.2em;
+  color: var(--color-text);
+  content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+  transition: color 0.2s ease;
+}
+
+ul.leaders li.project-item {
+  line-height: 0.85rem;
+  font-size: 0.87rem;
+}
+
+ul.leaders .chapter-number {
+  display: inline-block;
+  min-width: 1.8rem;
+  background-color: var(--color-background);
+  transition: color 0.2s ease;
+}
+
+ul.leaders .project-title {
+  padding-right: 0.4em;
+  background-color: var(--color-background);
+  transition: color 0.2s ease;
+}
+
+ul.leaders .project-year {
+  float: right;
+  padding-left: 0.4em;
+  background-color: var(--color-background);
+  transition: color 0.2s ease;
+}
+
+/* Faded state for hover effect */
+ul.leaders li.faded,
+ul.leaders li.faded::before {
+  color: var(--color-text-grey);
 }
 
 /* Image styles */
@@ -144,7 +230,7 @@ a {
 /* Video embed styles - same treatment as images */
 .video-figure {
   width: 70%;
-  margin: 2rem auto;
+  margin: 2rem auto 0;
   position: relative;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
@@ -161,11 +247,15 @@ a {
 }
 
 .video-caption {
-  width: 100%;
-  margin: 0.5rem auto 0;
+  width: 70%;
+  margin: 0.5rem auto 2rem;
   text-align: center;
-  font-size: 0.55rem;
-  line-height: 1.5;
+  font-size: 0.55rem !important;
+  line-height: 1.5 !important;
+}
+
+.video-caption a {
+  text-decoration: underline;
 }
 
 .about-image-container {
@@ -197,7 +287,7 @@ a {
 
 /* Typography */
 .title-text {
-  font-size: 0.805rem;
+  font-size: 0.9rem;
   line-height: 1.2;
   text-align: center;
   margin-bottom: 0.2rem;
@@ -206,7 +296,7 @@ a {
 }
 
 .subtitle-text {
-  font-size: 0.805rem;
+  font-size: 0.9rem;
   line-height: 0.936;
   text-align: center;
   margin-bottom: 3rem;
@@ -232,6 +322,7 @@ a {
   font-size: 0.805rem;
   line-height: 1.12;
   margin-bottom: 1.5rem;
+  text-align: justify;
 }
 
 .body-text p {
@@ -296,8 +387,6 @@ a {
 
 /* Project list item */
 .project-item {
-  display: flex;
-  align-items: baseline;
   margin: 0.15rem 0;
   cursor: pointer;
   font-size: 0.7rem;
@@ -348,64 +437,100 @@ a {
   }
 }
 
-/* Back button */
+/* Back button - rotated version of scroll-to-top arrow */
 .back-button {
   position: fixed;
-  top: 2rem;
-  left: 2rem;
+  top: 1rem;
+  left: 1rem;
   cursor: pointer;
   font-size: 0.98rem;
   z-index: 100;
   opacity: 0;
   transition: opacity 0.3s ease;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-family: inherit;
+  transform: rotate(-90deg); /* Rotate up arrow to point left */
 }
 
 .back-button.visible {
   opacity: 1;
 }
 
+.back-button:hover {
+  opacity: 0.7;
+}
+
+/* Scroll to top button */
+.scroll-top-button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  font-size: 0.98rem;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-family: inherit;
+}
+
+.scroll-top-button.visible {
+  opacity: 1;
+}
+
+.scroll-top-button:hover {
+  opacity: 0.7;
+}
+
 @media (max-width: 768px) {
-  .back-button {
+  .back-button,
+  .scroll-top-button {
     display: none;
   }
 }
 
-/* Language switcher */
-.language-switcher {
+/* Language flag button - same position as back-to-top arrow */
+.language-flag-button {
   position: fixed;
-  bottom: 1rem;
-  right: 2rem;
+  top: 1rem;
+  right: 1rem;
   cursor: pointer;
-  font-size: 0.55rem;
+  font-size: 1.2rem;
   z-index: 100;
   background: none;
   border: none;
   padding: 0;
-  font-family: inherit;
-  color: var(--color-text);
-  opacity: 0.3;
+  opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.language-switcher:hover {
+.language-flag-button.visible {
+  opacity: 0.5;
+}
+
+.language-flag-button:hover {
   opacity: 1;
 }
 
 @media (max-width: 768px) {
-  .language-switcher {
-    bottom: auto;
-    top: 1rem;
-    right: 1rem;
-    font-size: 0.5rem;
+  .language-flag-button {
+    font-size: 1rem;
   }
 }
 
 /* Language selection page specific styles */
 .language-page-container {
-  max-width: 80vw;
+  width: 100%;
   margin: 0 auto;
-  padding: 10vh 10% 3rem;
+  padding: 14vh 0 3rem;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .language-selection-wrapper {
@@ -414,10 +539,11 @@ a {
   justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
+  width: 100%;
 }
 
 .language-image {
-  max-width: 300px;
+  max-width: 150px;
   width: 100%;
   height: auto;
   flex-shrink: 0;
