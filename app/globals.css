@@ -597,17 +597,22 @@ ul.leaders li.faded .chapter-number.chapter-active {
 @media (max-width: 768px) {
   .language-selection-wrapper {
     flex-direction: row;
-    gap: 0.5rem;
+    gap: 0.8rem;
   }
 
   .language-button {
-    font-size: 0.6rem;
-    width: 4.2rem;
+    font-size: 0.7rem;
+    width: 5rem;
   }
 
   .language-image {
     max-width: 100px;
     width: 100px;
+  }
+
+  /* Smaller screensaver images on mobile */
+  .screensaver-frog {
+    transform: scale(0.5);
   }
 }
 
@@ -737,36 +742,91 @@ ul.leaders li.faded .chapter-number.chapter-active {
     padding: 0 0.5rem;
   }
 
+  /* Consistent font size for mobile */
   .title-text {
-    font-size: 0.93rem;
+    font-size: 0.85rem;
   }
 
   .subtitle-text {
-    font-size: 0.93rem;
-    margin-bottom: 2rem;
+    font-size: 0.85rem;
+    margin-bottom: 3.5rem;
   }
 
   .body-text {
-    font-size: 0.82rem;
+    font-size: 0.78rem;
+    line-height: 1.25;
   }
 
   .body-text p {
-    font-size: 0.82rem;
+    font-size: 0.78rem;
   }
 
   .chapter-item {
-    font-size: 0.88rem;
+    font-size: 0.78rem;
   }
 
   .chapter-number {
-    font-size: 0.88rem;
+    font-size: 0.78rem;
   }
 
   .project-item {
-    font-size: 0.72rem;
+    font-size: 0.78rem;
   }
 
   ul.leaders li.project-item {
-    font-size: 0.88rem;
+    font-size: 0.78rem;
+  }
+
+  /* ASSETS section - small caps styling */
+  .body-text strong {
+    font-variant: small-caps;
+    letter-spacing: 0.05em;
+  }
+
+  /* Image caption - smaller than body text */
+  .image-caption {
+    font-size: 0.6rem;
+  }
+
+  /* Project list - no dots, year in parentheses */
+  ul.leaders li::before {
+    display: none;
+  }
+
+  ul.leaders li.project-item {
+    line-height: 1.15;
+    margin-bottom: 0.3rem;
+  }
+
+  ul.leaders .project-title {
+    white-space: normal;
+  }
+
+  ul.leaders .project-year {
+    float: none;
+    display: inline;
+    padding-left: 0;
+  }
+
+  ul.leaders .project-year::before {
+    content: "(";
+  }
+
+  ul.leaders .project-year::after {
+    content: ")";
+  }
+
+  /* Project page title - centered with margins */
+  .project-page-title {
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+
+  .project-page-title .project-item {
+    display: block;
+  }
+
+  .project-page-title .project-title {
+    display: inline;
   }
 }
