@@ -217,6 +217,11 @@ ul.leaders li.faded::before {
   color: var(--color-text-grey);
 }
 
+/* Keep chapter number highlighted when any project in the chapter is hovered */
+ul.leaders li.faded .chapter-number.chapter-active {
+  color: var(--color-text);
+}
+
 /* Image styles */
 .image-figure {
   width: 70%;

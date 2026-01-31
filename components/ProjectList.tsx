@@ -49,7 +49,7 @@ export default function ProjectList({ projectsByChapter, lang }: ProjectListProp
                       setHoveredChapter(null);
                     }}
                   >
-                    <span className="chapter-number">
+                    <span className={`chapter-number ${isChapterHovered ? 'chapter-active' : ''}`}>
                       {index === 0 ? `${chapter.id}.` : '\u00A0\u00A0\u00A0\u00A0'}
                     </span>
                     <span className="project-title">

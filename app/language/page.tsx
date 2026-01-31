@@ -1,21 +1,12 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 
 export default function LanguagePage() {
   const router = useRouter();
   const [hoveredLang, setHoveredLang] = useState<string | null>(null);
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const [titleBounds, setTitleBounds] = useState<{ left: number; right: number } | null>(null);
-
-  useEffect(() => {
-    if (titleRef.current) {
-      const rect = titleRef.current.getBoundingClientRect();
-      setTitleBounds({ left: rect.left, right: rect.right });
-    }
-  }, []);
 
   const handleLanguageSelect = (lang: string) => {
     router.push(`/${lang}`);
@@ -23,21 +14,9 @@ export default function LanguagePage() {
 
   return (
     <div className="container-centered min-h-screen page-wrapper" style={{ paddingTop: '14vh', paddingBottom: '3rem' }}>
-      {/* Debug grid lines */}
-      {/* Center line - red */}
-      <div style={{ position: 'fixed', left: '50%', top: 0, bottom: 0, width: '1px', backgroundColor: 'red', zIndex: 9999, pointerEvents: 'none' }} />
-      {/* Left edge of title - blue */}
-      {titleBounds && (
-        <div style={{ position: 'fixed', left: titleBounds.left, top: 0, bottom: 0, width: '1px', backgroundColor: 'blue', zIndex: 9999, pointerEvents: 'none' }} />
-      )}
-      {/* Right edge of title - blue */}
-      {titleBounds && (
-        <div style={{ position: 'fixed', left: titleBounds.right, top: 0, bottom: 0, width: '1px', backgroundColor: 'blue', zIndex: 9999, pointerEvents: 'none' }} />
-      )}
-
       <header className="mb-12 text-center header-hover-group">
-        <span className="header-title-link" style={{ display: 'inline-block' }}>
-          <h1 ref={titleRef} className="title-text">henri badaröh</h1>
+        <span className="header-title-link transition-opacity">
+          <h1 className="title-text">henri badaröh</h1>
         </span>
       </header>
 
