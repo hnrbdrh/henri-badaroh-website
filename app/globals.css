@@ -601,8 +601,8 @@ ul.leaders li.faded .chapter-number.chapter-active {
   }
 
   .language-button {
-    font-size: 0.55rem;
-    width: 4rem;
+    font-size: 0.6rem;
+    width: 4.2rem;
   }
 
   .language-image {
@@ -730,39 +730,43 @@ ul.leaders li.faded .chapter-number.chapter-active {
   /* Reduce base font size for mobile */
   html,
   body {
-    font-size: 1.4em;
+    font-size: 1.55em;
+  }
+
+  .container-centered {
+    padding: 0 0.5rem;
   }
 
   .title-text {
-    font-size: 0.85rem;
+    font-size: 0.93rem;
   }
 
   .subtitle-text {
-    font-size: 0.85rem;
+    font-size: 0.93rem;
     margin-bottom: 2rem;
   }
 
   .body-text {
-    font-size: 0.75rem;
+    font-size: 0.82rem;
   }
 
   .body-text p {
-    font-size: 0.75rem;
+    font-size: 0.82rem;
   }
 
   .chapter-item {
-    font-size: 0.8rem;
+    font-size: 0.88rem;
   }
 
   .chapter-number {
-    font-size: 0.8rem;
+    font-size: 0.88rem;
   }
 
   .project-item {
-    font-size: 0.65rem;
+    font-size: 0.72rem;
   }
 
   ul.leaders li.project-item {
-    font-size: 0.8rem;
+    font-size: 0.88rem;
   }
 }
