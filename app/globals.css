@@ -596,8 +596,18 @@ ul.leaders li.faded .chapter-number.chapter-active {
 
 @media (max-width: 768px) {
   .language-selection-wrapper {
-    flex-direction: column;
-    gap: 2rem;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .language-button {
+    font-size: 0.55rem;
+    width: 4rem;
+  }
+
+  .language-image {
+    max-width: 100px;
+    width: 100px;
   }
 }
 
@@ -707,5 +717,52 @@ ul.leaders li.faded .chapter-number.chapter-active {
   to {
     opacity: 0;
     transform: scale(0.8) var(--frog-rotation);
+  }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* Hide style tester on mobile */
+  .style-tester {
+    display: none !important;
+  }
+
+  /* Reduce base font size for mobile */
+  html,
+  body {
+    font-size: 1.4em;
+  }
+
+  .title-text {
+    font-size: 0.85rem;
+  }
+
+  .subtitle-text {
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+  }
+
+  .body-text {
+    font-size: 0.75rem;
+  }
+
+  .body-text p {
+    font-size: 0.75rem;
+  }
+
+  .chapter-item {
+    font-size: 0.8rem;
+  }
+
+  .chapter-number {
+    font-size: 0.8rem;
+  }
+
+  .project-item {
+    font-size: 0.65rem;
+  }
+
+  ul.leaders li.project-item {
+    font-size: 0.8rem;
   }
 }

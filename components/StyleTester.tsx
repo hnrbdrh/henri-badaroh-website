@@ -63,6 +63,7 @@ export default function StyleTester() {
   return (
     <div
       ref={popupRef}
+      className="style-tester"
       style={{
         position: 'fixed',
         left: position.x,
