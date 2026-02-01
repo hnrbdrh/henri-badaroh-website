@@ -4,8 +4,8 @@ import Screensaver from '@/components/Screensaver'
 import StyleTester from '@/components/StyleTester'
 
 export const metadata: Metadata = {
-  title: 'Henri Badaroh - Brazilian Visual Artist and Writer',
-  description: 'Portfolio of Henri Badaroh, Brazilian visual artist and writer',
+  title: 'Henri BADARÖH',
+  description: 'Portfolio of Henri Badaröh, Brazilian visual artist and writer',
 }
 
 export default function RootLayout({
