@@ -1,8 +1,8 @@
 ---
 portrait: /portrait.jpg
-portraitCaption: "<em>Fig 1.</em> Portrait by Marisol Mendez (2024)"
+portraitCaption: <em>Fig 1.</em> Portrait by <a target="_blank" rel="noopener noreferrer" href="https://www.marisol-mendez.com">Marisol Mendez</a> (2024)
 socialLinks:
-  - name: Email
+  - name: E-mail
     url: mailto:work@henribadaroh.com
   - name: Instagram
     url: https://www.instagram.com/hnrbdrh/
@@ -12,9 +12,9 @@ socialLinks:
 
 Henri Badaröh is a Brazilian visual artist and writer.
 
-Through queer, decolonial and intersectional approaches, he focuses on the dialogues between photography and film, analogue creative practices and new media, image and written word, Europe and America.
+Through queer, decolonial and intersectional approaches, he focuses on the dialogues between photography and film, analogue creative practices and new media, image and written word, Europe and [América](https://youtu.be/Q2iGiYHo1Eg).
 
-Based in the Netherlands, Henri has been active in the arts and culture field for the past seven years, collaborating with multidisciplinary artists on publications and performances worldwide. He has also conducted portfolio reviews and mentoring sessions for World Press Photo, FUTURES Photography, Foam Amsterdam, Fomu Antwerp, and the Royal Academy of Art (KABK), amongst others.
+Based in the Netherlands, Henri has been active in the arts and culture field for the past seven years, collaborating with multidisciplinary artists on publications and performances worldwide. He has also conducted portfolio reviews and mentoring sessions for World Press Photo, FUTURES Photography, Foam Amsterdam, Fomu Antwerp, and the Royal Academy of Art, The Hague (KABK), amongst others.
 He holds an MA in Film and Photographic Studies from Leiden University (2019) and a BA in Photography from São Paulo.
 
 **ASSETS**
