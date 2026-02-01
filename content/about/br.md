@@ -1,6 +1,6 @@
 ---
 portrait: /portrait.jpg
-portraitCaption: "<em>Fig 1.</em> Retrato por [Marisol Mendez](https://www.marisol-mendez.com) (2024)"
+portraitCaption: <em>Fig 1.</em> Retrato por <a target="_blank" rel="noopener noreferrer" href="https://www.marisol-mendez.com">Marisol Mendez</a> (2024)
 socialLinks:
   - name: E-mail
     url: mailto:work@henribadaroh.com
@@ -12,12 +12,12 @@ socialLinks:
 
 Henri Badaröh é um artista visual e escritor brasileiro.
 
-Através de abordagens queer, descoloniais e interseccionais, ele foca nos diálogos entre fotografia e cinema, práticas criativas analógicas e novas mídias, imagem e palavra escrita, Europa e América.
+Através de abordagens queer, descoloniais e interseccionais, ele foca nos diálogos entre fotografia e cinema, práticas criativas analógicas e novas mídias, imagem e palavra escrita, Europa e [América](https://youtu.be/Q2iGiYHo1Eg).
 
 Baseado na Holanda, Henri tem sido ativo no campo das artes e cultura nos últimos sete anos, colaborando com artistas multidisciplinares em publicações e performances em todo o mundo. Ele também conduziu revisões de portfólio e sessões de mentoria para World Press Photo, FUTURES Photography, Foam Amsterdam, Fomu Antuérpia e a Real Academia de Arte (KABK), entre outros.
 Ele possui mestrado em Estudos de Cinema e Fotografia pela Universidade de Leiden (2019) e bacharelado em Fotografia por São Paulo.
 
-**ATIVOS**
+**RECURSOS**
 
 <p style="font-size: 0.55rem; line-height: 1.5;"><a href="/HAL_9000.gif" style="text-decoration: underline; font-style: italic;">Autorretrato</a> [2018]</p>
 

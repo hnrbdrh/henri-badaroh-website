@@ -12,7 +12,7 @@ socialLinks:
 
 Henri Badaröh is a Brazilian visual artist and writer.
 
-Through queer, decolonial and intersectional approaches, he focuses on the dialogues between photography and film, analogue creative practices and new media, image and written word, Europe and America.
+Through queer, decolonial and intersectional approaches, he focuses on the dialogues between photography and film, analogue creative practices and new media, image and written word, Europe and [América](https://youtu.be/Q2iGiYHo1Eg).
 
 Based in the Netherlands, Henri has been active in the arts and culture field for the past seven years, collaborating with multidisciplinary artists on publications and performances worldwide. He has also conducted portfolio reviews and mentoring sessions for World Press Photo, FUTURES Photography, Foam Amsterdam, Fomu Antwerp, and the Royal Academy of Art, The Hague (KABK), amongst others.
 He holds an MA in Film and Photographic Studies from Leiden University (2019) and a BA in Photography from São Paulo.
