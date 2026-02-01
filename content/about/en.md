@@ -1,6 +1,6 @@
 ---
 portrait: /portrait.jpg
-portraitCaption: <em>Fig 1.</em> Portrait by <a target="_blank" href="https://www.marisol-mendez.com">"Marisol Mendez</a> (2024)
+portraitCaption: <em>Fig 1.</em> Portrait by <a target="_blank" rel="noopener noreferrer" href="https://www.marisol-mendez.com">Marisol Mendez</a> (2024)
 socialLinks:
   - name: E-mail
     url: mailto:work@henribadaroh.com
