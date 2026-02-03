@@ -1,7 +1,7 @@
 ---
-title: "Image and Territory Symposium"
-year: "2024"
-chapter: "iii"
+title: "White Associations"
+year: "2018"
+chapter: "i"
 order: 1
 ---
 
