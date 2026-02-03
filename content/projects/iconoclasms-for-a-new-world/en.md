@@ -5,10 +5,36 @@ chapter: "i"
 order: 2
 ---
 
-Loosely inspired by Glauber Rocha’s seminal work, the film Entranced Earth (Terra em Transe, 1967), Entranced Brazilians utilises elements of internet language in an analysis of the creative thinking and expression of various Brazilian personalities during the second half of the 20th century, an important period in the country’s development, historically as well as artistically.
+2020.
+The Plague Year.
 
-![Eight models presenting speculative proposals](/projects/entranced-brazilians-2/images/image1.png)
+A defining year has set in motion everlasting consequences.
+Monuments are overthrown.
+A new world is being shaped, and this world is no longer subjugated by the white.
 
-*Fig 1. Eight models presenting speculative proposals for Skeppsbron in Stockholm highlight differing representational approaches and positions (Julian Dehlin, 2019). Courtesy of AADes.*
+Circa 1000, a man named Leifr Eiríksson invaded the continent by means of Ikkarumikluak, in Canada and decided 
+to misname it <em>Vínland</em>.
+In 1492, a man named Cristoforo Colombo invaded the continent by means of Guanahani, in the Bahamas, and for that 
+he became known as a discoverer.
+In 1507, a man named Martin Waldseemüller decided to misname that continent, placing the word <em>America</em> on a map, in the territory today known as Brazil (de facto Pindorama).
+In 1776, a group of men gathered as the Continental Congress, declared that a specific country should then be called 
+the United States of America.
 
-As Stockholm's oldest quay, Skeppsbron and Skeppsbrokajen have a unique history as the 'shop window' of Sweden: a hub for the import and export of goods, a marketplace, a thoroughfare, and a metaphorical bridge between the capital and the rest of Europe. Between people, ideas and commerce, this was once Stockholm's foremost site of exchange. Although it still stands as a defining image of the city today, it has come to be dominated by car parks and underused public space.
+Be it in Ikkarumikluak or Guanahani or Pindorama, 
+America was not ever born in the United States. 
+Yet, somehow, the country and its allies still claim the identity of the entire American continent as its own.
+
+<em>We cannot talk of decolonisation without acknowledging the imperialist lexicon we use, protect, and disseminate.</em>
+
+
+![*Fig 1.* The Invasion of Abya Yala, after Theodor de Bry’s “Cristoforo Colombo arrives in America” (1594)](/projects/iconoclasms-for-a-new-world/images/invasion_72.jpg)
+
+![*Fig 2.* The Rape of Abya Yala, after Jan van der Straet’s “The Discovery of America” (ca 1587–89)](/projects/iconoclasms-for-a-new-world/images/rape_72.jpg)
+
+![*Fig 3.* The Misnaming of Abya Yala, after Martin Waldseemüller’s “Universalis Cosmographia” (1507)](/projects/iconoclasms-for-a-new-world/images/misnaming_72.jpg)
+
+
+Through the symbolisms brought out by the earliest depictions of the New World and words of revision placed over the images is a first step towards an understanding of the political implications caused by European actions over the course of their centuries-long colonial power.
+
+
+<iframe src="https://player.vimeo.com/video/487796228?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;title=0&amp;byline=0&amp;portrait=0&amp" width="1060" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Americans All is a 1943 film made by Julien Bryan and commissioned by the United States' FDR Good Neighbor Policy. They hired filmmakers to make movies in the south with the aim of promoting friendly relations with American countries in the face of Europe's disintegration. This film marks a rare moment in modern history in which the United States is not led by delusions of grandeur."></iframe>

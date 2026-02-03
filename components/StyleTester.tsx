@@ -4,10 +4,10 @@ import { useState, useRef, useEffect } from 'react';
 
 const colors = [
   { name: 'Black', value: '#000000' },
-  { name: 'Brown', value: '#554035' },
-  { name: 'Rust', value: '#833922' },
-  { name: 'Terra', value: '#783E36' },
-  { name: 'Orange', value: '#A2492C' },
+  { name: 'Brown', value: '#403A36' },
+  { name: 'Rust', value: '#813823' },
+  { name: 'Terra', value: '#774034' },
+  { name: 'Orange', value: '#A0482C' },
 ];
 
 export default function StyleTester() {
