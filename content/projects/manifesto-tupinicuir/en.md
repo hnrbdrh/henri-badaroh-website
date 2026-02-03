@@ -2,7 +2,7 @@
 title: "Manifesto Tupinicuir"
 year: "2019"
 chapter: "i"
-order: 2
+order: 3
 ---
 
 Invited as guest critic for final reviews at the Faculty of Architecture and Urbanism, Federal University of Rio de Janeiro.
