@@ -1,8 +1,8 @@
 ---
-title: "Landscapes of Extraction"
-year: "2024"
-chapter: "ii"
-order: 1
+title: "12:51"
+year: "2017"
+chapter: "i"
+order: 4
 ---
 
 Published in *Critical Territories Journal*, this essay explores the visual representation of industrial landscapes and their impact on ecological systems.
