@@ -2,7 +2,7 @@
 title: "White Associations"
 year: "2018"
 chapter: "i"
-order: 3
+order: 4
 ---
 
 Keynote lecture at the International Symposium on Visual Culture, University of São Paulo.
