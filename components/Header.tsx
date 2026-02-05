@@ -23,11 +23,11 @@ const subtitles = {
   ),
   br: (
     <>
-      editor & escritor <span className="italic-text">de</span> <span className="italic-text">ensaios</span> <span className="italic-text">&</span> <span className="italic-text">crônicas</span>,
+      escritor & editor <span className="italic-text">de</span> <span className="italic-text">ensaios</span> <span className="italic-text">&</span> <span className="italic-text">crônicas</span>,
       <br />
       artista visual,
       <br />
-      pensador(a)
+      pensador
     </>
   ),
 };
