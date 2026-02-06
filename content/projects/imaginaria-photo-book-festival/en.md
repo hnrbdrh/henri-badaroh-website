@@ -10,5 +10,4 @@ Durante a semana do festival, as conversas com artistas, publicadoras/es, editor
 
 
 <div class="video-figure">
-<iframe width="1060" height="720" src="https://www.youtube.com/embed/yRp0NJVaObM?si=hTn5LYQo0Ga_2OFE&amp;controls=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-<p class="video-caption"><em>Fig 1.</em> Video by <a href="http://festivalimaginaria.com.br/" target="_blank" rel="noopener noreferrer">IMAGINÁRIA</a></p>
+<iframe width="1060" height="720" src="https://www.youtube.com/embed/yRp0NJVaObM?si=hTn5LYQo0Ga_2OFE&amp;controls=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><p class="video-caption"><em>Fig 1.</em> Video by <a href="http://festivalimaginaria.com.br/" target="_blank" rel="noopener noreferrer">IMAGINÁRIA</a></p>

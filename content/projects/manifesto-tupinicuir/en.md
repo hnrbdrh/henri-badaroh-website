@@ -5,6 +5,4 @@ chapter: "i"
 order: 3
 ---
 
-Invited as guest critic for final reviews at the Faculty of Architecture and Urbanism, Federal University of Rio de Janeiro.
-
-Provided critical feedback on student projects exploring the relationship between visual representation and spatial design.
+NB: The idea here is to create a locked page (with password?) so only invitees can access. Or a landing page that says "Coming soon". Ideally both because I feel I'll be using both in the future.
