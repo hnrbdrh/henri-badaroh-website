@@ -13,4 +13,4 @@ Formally trained as a painter, Alice has been experimenting with materials and m
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2259558125%3Fsecret_token%3Ds-5jEbmDMlHNz&color=%23585d5e&auto_play=false&hide_related=false&show_comments=true&show_user=false&show_reposts=false&show_teaser=true"></iframe>
 
-<em>Foam Talks</em> was produced by Nordin Janssen and <a rel="noreferrer noopener" href="https://www.foam.org" data-type="URL" data-id="https://www.foam.org" target="_blank">Foam</a>.
+<br><em>Foam Talks</em> was produced by Nordin Janssen and <a rel="noreferrer noopener" href="https://www.foam.org" data-type="URL" data-id="https://www.foam.org" target="_blank">Foam</a>.

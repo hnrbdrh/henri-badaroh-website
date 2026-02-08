@@ -13,7 +13,7 @@ Listen to it on Apple Podcasts or Spotify.
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2260018622%3Fsecret_token%3Ds-tpqOgu2za9P&color=%23585d5e&auto_play=false&hide_related=false&show_comments=true&show_user=false&show_reposts=false&show_teaser=true"></iframe>
 
-
+<br>
 Coordinator: Marília Librandi
 Co-organizers: Sérgio Bairon,  João Biehl, Miqueias Mugge
 Research Fellows: Jonathan A. Romero and Nikhil Pandhi
