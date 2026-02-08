@@ -7,9 +7,7 @@ order: 4
 
 # White Associations
 
-![*Fig 1.* Composite portrait II](/projects/white-associations/images/white-associations-image-2.jpg)
-
-![*Fig 2.* My parents and me.](/projects/white-associations/images/white-associations-image-3.jpg)
+![*Fig 1.* Composite portrait II](/projects/white-associations/images/white-associations-image-2.jpg) ![*Fig 2.* My parents and me.](/projects/white-associations/images/white-associations-image-3.jpg)
 
 ![*Fig 3.* Composite portrait HNR](/projects/white-associations/images/white-associations-image-4.jpg)
 
