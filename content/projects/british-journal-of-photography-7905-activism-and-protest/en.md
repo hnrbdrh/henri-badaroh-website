@@ -16,6 +16,7 @@ Because of the lack of acknowledgement, the contribution of Afro-Mexicans to the
 The project's impact is most poignant when Carballo uncovers family stories, including her own.
 "Through theory — feminisms have been important guides — but also through listening to my family, the idea of telling a story about what it means to be free has opened up paths to the intimate, the historical, and also the public." Addressing the collection and preservation of family albums, and discovering her own genealogy, Carballo provides the young with tools to question traditional canons and tell their story. Tales that no longer deny the roots of the people, but proudly affirm their origin — a possible Afro-Indigenous mestizo.
 <br>
+<br>
 <em>This essay has been amended from the original.</em>
 <br><a href="https://www.1854.photography/2021/11/koral-carballo-remaingines-representation/"><em>Read at source.</em></a>
 <br>First published in <em>BJP 7905</em>.

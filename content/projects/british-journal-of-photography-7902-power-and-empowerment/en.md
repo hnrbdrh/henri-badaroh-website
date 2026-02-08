@@ -23,6 +23,7 @@ In 2017, Furtado founded the project *Identidades Marginais* (Marginal Identitie
 With his projects, Furtado is "not trying to salvage LGBTQ+'s culture" but pleading for people to trust their own narrative and aesthetic, while committing to rediscover and revere those who came before. "It's about everyone doing their thing but also being part of a collective movement, generating beauty amongst the wreckages," Furtado says. And this is the lasting thought.
 Despite the violence and control, despite a far-right, genocidal government with an openly homophobic president in Jair Bolsonaro, focused on decimating its most vibrant people, there is nothing that can take away the resilience and lust for life of Brazil's children.
 <br>
+<br>
 <em>This essay has been amended from the original.</em>
 <br><a href="https://www.1854.photography/2021/04/igor-furtados-work-stands-for-the-people-their-importance-their-story/"><em>Read at source.</em></a>
 <br>First published in <em>BJP 7902</em>.
