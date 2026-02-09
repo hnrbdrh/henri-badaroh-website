@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Screensaver from '@/components/Screensaver'
 import StyleTester from '@/components/StyleTester'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata: Metadata = {
   title: 'Henri BADARÖH',
@@ -24,6 +25,7 @@ export default function RootLayout({
         {children}
         <Screensaver />
         <StyleTester />
+        <Analytics />
       </body>
     </html>
   )
