@@ -1,4 +1,4 @@
-# Henri Badaroh Portfolio Website
+# Henri Badaröh Portfolio Website
 
 A bilingual (English/Brazilian Portuguese) portfolio website built with Next.js 14, React, and TypeScript.
 
