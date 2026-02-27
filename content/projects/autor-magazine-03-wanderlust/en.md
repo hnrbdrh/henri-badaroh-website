@@ -2,7 +2,7 @@
 title: "Autor Magazine #03 'Wanderlust'"
 year: "2016"
 chapter: "ii"
-order: 10
+order: 15
 ---
 ![*Fig 1.* Autor Magazine spread](/projects/autor-magazine-03-wanderlust/images/autor-magazine-cover.jpg)
 

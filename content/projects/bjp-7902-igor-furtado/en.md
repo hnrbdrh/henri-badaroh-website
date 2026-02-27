@@ -1,10 +1,10 @@
 ---
-title: "British Journal of Photography #7902 'Power & Empowerment'"
+title: "★ Igor Furtado: 'Identidades Marginais / Pölýmørphouš'"
+subtitle: "*for* British Journal of Photography #7902"
 year: "2021"
-chapter: "ii"
-order: 8
+chapter: "iv"
+order: 3
 ---
-
 In 1928, Brazilian writer Oswald de Andrade published the landmark Cannibalist Manifesto. His experimental text became a key reference for Brazil to understand its cultural roots, while coming to terms with the lingering ghosts of colonisation. Since then, the manifesto — which essentially explains how foreign and domestic influences have created a tangible Brazilian identity — became a theory that then evolved into a widespread movement. The poet Augusto de Campos once famously deemed it "the only original Brazilian philosophy". Today, it is a fundamental part of the country's social fabric.
 
 Almost a century and many revolutions later, we see the re-emergence of this philosophy in Brazil through the freshly urgent lens of identity and gender politics. At the forefront of this is the LGBTQ+ community. It recuperates and honours the country's native arts and culture, and, above all, past and present pioneers, who paved the many ways for Brazilian contemporary expression.
@@ -22,8 +22,7 @@ In 2017, Furtado founded the project *Identidades Marginais* (Marginal Identitie
 
 With his projects, Furtado is "not trying to salvage LGBTQ+'s culture" but pleading for people to trust their own narrative and aesthetic, while committing to rediscover and revere those who came before. "It's about everyone doing their thing but also being part of a collective movement, generating beauty amongst the wreckages," Furtado says. And this is the lasting thought.
 Despite the violence and control, despite a far-right, genocidal government with an openly homophobic president in Jair Bolsonaro, focused on decimating its most vibrant people, there is nothing that can take away the resilience and lust for life of Brazil's children.
-<br>
-<br>
-<em>This essay has been amended from the original.</em>
+
 <br><a href="https://www.1854.photography/2021/04/igor-furtados-work-stands-for-the-people-their-importance-their-story/"><em>Read at source.</em></a>
-<br>First published in <em>BJP 7902</em>.
+<p  class="credit">This essay has been amended from the original.
+<br>First published in <em>British Journal of Photography</em> #7902 <em>Power & Empowerment</em>. © Henri Badaröh (2021) </p>

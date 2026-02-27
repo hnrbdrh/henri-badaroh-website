@@ -2,7 +2,7 @@
 title: "Nous Magazine #07 'Work'"
 year: "2016"
 chapter: "ii"
-order: 9
+order: 14
 ---
 
 

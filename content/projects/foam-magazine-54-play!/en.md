@@ -1,8 +1,8 @@
 ---
-title: "Foam Magazine #58 'Talent Issue'"
-year: "2021"
+title: "Foam Magazine #54 'Play'"
+year: "2019"
 chapter: "ii"
-order: 6
+order: 12
 ---
 ![*Fig 1.* Foam Magazine cover](/projects/foam-magazine-58-talent/images/fm58-cover.jpg)
 
