@@ -6,6 +6,8 @@ socialLinks:
     url: mailto:work@henribadaroh.com
   - name: Instagram
     url: https://www.instagram.com/hnrbdrh/
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/hnrbdrh/
   - name: CV
     url: https://drive.google.com/file/d/1IeWt8IZtQtFxAEHfRY2Rw4TkRpHnKTMO/edit
 ---
