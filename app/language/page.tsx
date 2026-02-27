@@ -3,7 +3,6 @@
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import Image from 'next/image';
-import DebugGrid from '@/components/DebugGrid';
 
 export default function LanguagePage() {
   const router = useRouter();
@@ -15,7 +14,6 @@ export default function LanguagePage() {
 
   return (
     <div className="container-centered min-h-screen page-wrapper" style={{ paddingTop: '14vh', paddingBottom: '3rem' }}>
-      <DebugGrid />
       <header className="mb-12 text-center header-hover-group">
         <span className="header-title-link transition-opacity">
           <h1 className="title-text">henri badaröh</h1>
@@ -32,7 +30,7 @@ export default function LanguagePage() {
           English
         </button>
 
-        <div className={`language-image ${hoveredLang ? 'grayscale' : ''}`}>
+        <div className={`language-image ${hoveredLang ? '' : 'grayscale'}`}>
           <Image
             src="/frog.png"
             alt="Frog"

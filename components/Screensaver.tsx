@@ -46,7 +46,7 @@ export default function Screensaver() {
     const checkInactivity = setInterval(() => {
       const timeSinceActivity = Date.now() - lastActivity;
 
-      if (timeSinceActivity > 300000 && !isActive) { // 5 minutes
+      if (timeSinceActivity > 180000 && !isActive) { // 3 minutes
         setIsActive(true);
         setScreensaverStartTime(Date.now());
       }

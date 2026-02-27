@@ -9,6 +9,7 @@ interface HeaderProps {
   lang: Language;
   showSubtitleLink?: boolean;
   showLanguageFlag?: boolean;
+  isHomepage?: boolean;
 }
 
 const subtitles = {
@@ -32,7 +33,7 @@ const subtitles = {
   ),
 };
 
-export default function Header({ lang, showSubtitleLink = false, showLanguageFlag = true }: HeaderProps) {
+export default function Header({ lang, showSubtitleLink = false, showLanguageFlag = true, isHomepage = false }: HeaderProps) {
   const subtitle = subtitles[lang];
   const router = useRouter();
   const pathname = usePathname();
@@ -53,6 +54,10 @@ export default function Header({ lang, showSubtitleLink = false, showLanguageFla
   // Show the flag for the OTHER language (the one to switch to)
   const otherLanguageFlag = lang === 'en' ? '🇧🇷' : '🇬🇧';
 
+  // Use CSS classes for opacity to ensure Safari compatibility
+  const titleFaded = hoveredElement === 'subtitle' ? 'header-element-faded' : '';
+  const subtitleFaded = hoveredElement === 'title' ? 'header-element-faded' : '';
+
   return (
     <>
       {showLanguageFlag && (
@@ -67,8 +72,7 @@ export default function Header({ lang, showSubtitleLink = false, showLanguageFla
       <header className="mb-12 text-center header-hover-group">
         <Link
           href={`/${lang}/about`}
-          className="header-title-link transition-opacity"
-          style={{ opacity: hoveredElement === 'subtitle' ? 0.3 : 1 }}
+          className={`header-title-link transition-opacity ${titleFaded}`}
           onMouseEnter={() => setHoveredElement('title')}
           onMouseLeave={() => setHoveredElement(null)}
         >
@@ -78,8 +82,16 @@ export default function Header({ lang, showSubtitleLink = false, showLanguageFla
         {showSubtitleLink ? (
           <Link
             href={`/${lang}`}
-            className="header-subtitle-link transition-opacity"
-            style={{ opacity: hoveredElement === 'title' ? 0.3 : 1 }}
+            className={`header-subtitle-link transition-opacity ${subtitleFaded}`}
+            onMouseEnter={() => setHoveredElement('subtitle')}
+            onMouseLeave={() => setHoveredElement(null)}
+          >
+            <p className="subtitle-text">{subtitle}</p>
+          </Link>
+        ) : isHomepage ? (
+          <Link
+            href={`/${lang}`}
+            className={`header-subtitle-link transition-opacity ${subtitleFaded}`}
             onMouseEnter={() => setHoveredElement('subtitle')}
             onMouseLeave={() => setHoveredElement(null)}
           >
@@ -87,8 +99,7 @@ export default function Header({ lang, showSubtitleLink = false, showLanguageFla
           </Link>
         ) : (
           <p
-            className="subtitle-text header-subtitle-link"
-            style={{ opacity: hoveredElement === 'title' ? 0.3 : 1 }}
+            className={`subtitle-text header-subtitle-link ${subtitleFaded}`}
             onMouseEnter={() => setHoveredElement('subtitle')}
             onMouseLeave={() => setHoveredElement(null)}
           >

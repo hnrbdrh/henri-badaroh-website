@@ -19,7 +19,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: La
   }
 
   return (
-    <>
+    <div className="subpage-content">
       <BackButton lang={lang} showBackButton={false} showScrollToTop={false} />
       <div className="container-centered min-h-screen page-wrapper" style={{ paddingTop: '14vh', paddingBottom: '3rem' }}>
         <Header lang={lang} showSubtitleLink showLanguageFlag={false} />
@@ -42,10 +42,15 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: La
           <p className="image-caption" style={{ marginBottom: '2rem' }} dangerouslySetInnerHTML={{ __html: aboutContent.portraitCaption }} />
         )}
 
-        {/* Biography (before ASSETS) */}
+        {/* Biography (before ASSETS/RECURSOS) */}
         {(() => {
-          const assetsMarker = '<strong>ASSETS</strong>';
-          const assetsIndex = aboutContent.content.indexOf(assetsMarker);
+          // Support both English "ASSETS" and Portuguese "RECURSOS"
+          const assetsMarkerEn = '<strong>ASSETS</strong>';
+          const assetsMarkerBr = '<strong>RECURSOS</strong>';
+          let assetsIndex = aboutContent.content.indexOf(assetsMarkerEn);
+          if (assetsIndex === -1) {
+            assetsIndex = aboutContent.content.indexOf(assetsMarkerBr);
+          }
           const bioContent = assetsIndex > -1
             ? aboutContent.content.substring(0, assetsIndex)
             : aboutContent.content;
@@ -63,7 +68,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: La
 
               {/* Social Links - above ASSETS */}
               {aboutContent.socialLinks && aboutContent.socialLinks.length > 0 && (
-                <div className="text-left" style={{ marginBottom: '3rem', fontSize: '0.805rem', fontStyle: 'italic' }}>
+                <div className="text-left" style={{ marginBottom: '3rem', fontSize: '0.676rem', fontStyle: 'italic' }}>
                   {aboutContent.socialLinks.map((link: SocialLink, index: number) => (
                     <span key={link.name}>
                       <a
@@ -74,13 +79,13 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: La
                       >
                         {link.name}
                       </a>
-                      {index < aboutContent.socialLinks.length - 1 && ', '}
+                      {index < aboutContent.socialLinks.length - 1 && ' | '}
                     </span>
                   ))}
                 </div>
               )}
 
-              {/* ASSETS section */}
+              {/* ASSETS/RECURSOS section */}
               {assetsContent && (
                 <div
                   className="body-text"
@@ -93,7 +98,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: La
         })()}
       </main>
     </div>
-    </>
+    </div>
   );
 }
 

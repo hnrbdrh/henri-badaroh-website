@@ -14,12 +14,18 @@ export default function BackButton({ lang, showBackButton = true, showScrollToTo
   const router = useRouter();
   const pathname = usePathname();
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [hasScrolledMore, setHasScrolledMore] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show arrows immediately when user scrolls even a little
+      // Back button appears after a small scroll
       const scrolled = window.scrollY > 10;
       setHasScrolled(scrolled);
+
+      // Scroll to top arrow appears after scrolling further (300px or 30% of viewport)
+      const scrollThreshold = Math.max(300, window.innerHeight * 0.3);
+      const scrolledMore = window.scrollY > scrollThreshold;
+      setHasScrolledMore(scrolledMore);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -66,10 +72,10 @@ export default function BackButton({ lang, showBackButton = true, showScrollToTo
       >
         {otherLanguageFlag}
       </button>
-      {/* Scroll to top - visible when scrolled, replaces flag */}
+      {/* Scroll to top - visible after scrolling further, replaces flag */}
       {showScrollToTop && (
         <button
-          className={`scroll-top-button ${hasScrolled ? 'visible' : ''}`}
+          className={`scroll-top-button ${hasScrolledMore ? 'visible' : ''}`}
           onClick={scrollToTop}
           aria-label="Scroll to top"
         >

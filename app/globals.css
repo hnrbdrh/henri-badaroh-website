@@ -51,20 +51,17 @@
   Change these values to update fonts and colors globally
 */
 :root {
-  /* Colors - change these to update site-wide */
-  --color-text: #7F0B00;
-  --color-text-grey: rgba(127, 11, 0, 0.3);
+  /* Colors - Terra color applied site-wide */
+  --color-text: #774034;
+  --color-text-grey: rgba(119, 64, 52, 0.3);
   --color-background: #FBFBFB;
 
   /* Font - change to your preferred serif font */
   --font-serif: 'Garamond Premier Pro', Georgia, 'Times New Roman', serif;
 
-  /* Layout spacing */
-  --content-max-width: 1200px;
-  --margin-desktop: 10%;
-  --margin-tablet: 8%;
-  --margin-mobile: 5%;
-  --margin-small-mobile: 4%;
+  /* Layout - responsive content width */
+  --content-width: 1000px;
+  --content-scale: 1;
 }
 
 /* Base styles */
@@ -82,6 +79,7 @@ body {
   color: var(--color-text);
   font-family: var(--font-serif);
   font-size: 2.2em;
+  transition: font-size 0.3s ease;
 }
 
 /* Smooth scrolling for anchor links */
@@ -109,28 +107,69 @@ a {
 
 /* Utility classes for consistent styling */
 .container-centered {
-  width: var(--content-max-width);
+  width: var(--content-width);
+  max-width: calc(100vw - 2rem);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0;
+  transform: scale(var(--content-scale));
+  transform-origin: top center;
+  transition: width 0.3s ease, transform 0.3s ease, max-width 0.3s ease;
 }
 
-/* Responsive margins */
-@media (max-width: 1200px) {
-  .container-centered {
-    width: 810px;
+
+/* >1200px: Full 1000px content width */
+@media (min-width: 1201px) {
+  :root {
+    --content-width: 1000px;
+    --content-scale: 1;
   }
 }
 
-@media (max-width: 900px) {
-  .container-centered {
-    width: 620px;
+/* 1000px - 1200px: Scale down moderately */
+@media (max-width: 1200px) and (min-width: 1001px) {
+  :root {
+    --content-width: 850px;
+    --content-scale: 1;
+  }
+
+  html, body {
+    font-size: 2em;
   }
 }
 
-@media (max-width: 768px) {
+/* 901px - 1000px: Fixed content width, shrinking margins */
+@media (max-width: 1000px) and (min-width: 901px) {
+  :root {
+    --content-width: 850px;
+    --content-scale: 1;
+  }
+
+  html, body {
+    font-size: 2em;
+  }
+
   .container-centered {
-    width: 98vw;
-    padding: 0 1rem;
+    width: 850px;
+    max-width: calc(100vw - 24px);
+    padding: 0;
+  }
+}
+
+/* 769px - 900px: Fixed content width, shrinking margins */
+@media (max-width: 900px) and (min-width: 769px) {
+  :root {
+    --content-width: 850px;
+    --content-scale: 1;
+  }
+
+  html, body {
+    font-size: 1.9em;
+  }
+
+  .container-centered {
+    width: 850px;
+    max-width: calc(100vw - 24px);
+    padding: 0;
   }
 }
 
@@ -153,6 +192,12 @@ a {
 .header-title-link,
 .header-subtitle-link {
   transition: opacity 0.2s ease;
+  display: block;
+}
+
+/* Header element faded state for hover effect */
+.header-element-faded {
+  opacity: 0.3 !important;
 }
 
 /* Fade transition for page content */
@@ -228,6 +273,60 @@ ul.leaders li.faded .chapter-number.chapter-active {
   margin: 2rem auto;
 }
 
+/* Image row layouts - 2 or 3 images side by side */
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  width: 70%;
+}
+
+.image-row .image-figure {
+  width: 100%;
+  margin: 0;
+}
+
+/* Two images side by side */
+.image-row-2 .image-figure {
+  flex: 1;
+}
+
+/* Three images side by side */
+.image-row-3 .image-figure {
+  flex: 1;
+}
+
+/* Single image width options */
+.image-half {
+  width: 50% !important;
+}
+
+.image-third {
+  width: 33.33% !important;
+}
+
+.image-two-thirds {
+  width: 66.66% !important;
+}
+
+@media (max-width: 768px) {
+  .image-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .image-row .image-figure {
+    width: 100%;
+  }
+
+  .image-half,
+  .image-third,
+  .image-two-thirds {
+    width: 100% !important;
+  }
+}
+
 .project-image {
   width: 100%;
   display: block;
@@ -244,8 +343,7 @@ ul.leaders li.faded .chapter-number.chapter-active {
   width: 70%;
   margin: 2rem auto 0;
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
 }
 
@@ -271,7 +369,7 @@ ul.leaders li.faded .chapter-number.chapter-active {
 }
 
 .about-image-container {
-  width: 70%;
+  width: 56%;
   margin: 2rem auto 0.5rem;
 }
 
@@ -331,7 +429,7 @@ ul.leaders li.faded .chapter-number.chapter-active {
 }
 
 .body-text {
-  font-size: 0.805rem;
+  font-size: 0.676rem;
   line-height: 1.12;
   margin-bottom: 1.5rem;
   text-align: justify;
@@ -339,7 +437,7 @@ ul.leaders li.faded .chapter-number.chapter-active {
 
 .body-text p {
   margin-bottom: 0.7rem;
-  font-size: 0.805rem;
+  font-size: 0.676rem;
 }
 
 .body-text p:last-child {
@@ -374,11 +472,36 @@ ul.leaders li.faded .chapter-number.chapter-active {
   font-size: 0.55rem !important;
 }
 
+/* Credit text - same size as captions, full width, left aligned */
+.body-text .credit {
+  font-size: 0.55rem;
+  line-height: 1.5;
+  text-align: left;
+  margin: 1rem 0;
+}
+
+.body-text .credit a {
+  text-decoration: underline;
+}
+
+/* Quote text - same size as body, wider margins */
+.body-text blockquote {
+  font-size: 0.676rem;
+  line-height: 1.12;
+  margin: 2rem 15%;
+  text-align: justify;
+  font-style: normal;
+}
+
+.body-text blockquote a {
+  text-decoration: underline;
+}
+
 /* Chapter menu */
 .chapter-item {
   display: flex;
   align-items: baseline;
-  font-size: 0.8625rem;
+  font-size: 1.035rem;
   line-height: 0.924;
   margin: 0.055rem 0;
   cursor: pointer;
@@ -390,6 +513,24 @@ ul.leaders li.faded .chapter-number.chapter-active {
   white-space: nowrap;
   flex-shrink: 0;
   margin-left: 0.3rem;
+}
+
+.projects-ongoing-text {
+  font-style: italic;
+  font-variant: normal;
+  font-size: 0.7rem;
+  margin-left: 0.3rem;
+  opacity: 0;
+  animation: fadeInSmooth 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeInSmooth {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Chapter section */
@@ -411,7 +552,7 @@ ul.leaders li.faded .chapter-number.chapter-active {
   font-variant: common-ligatures small-caps;
   letter-spacing: 0;
   margin-right: 0.2rem;
-  font-size: 0.8625rem;
+  font-size: 1.035rem;
 }
 
 .project-title {
@@ -426,11 +567,6 @@ ul.leaders li.faded .chapter-number.chapter-active {
 }
 
 @media (max-width: 900px) {
-  .container-centered {
-    width: 98vw;
-    padding: 0 1rem;
-  }
-
   .chapter-section {
     margin-top: 2rem;
   }
@@ -458,6 +594,7 @@ ul.leaders li.faded .chapter-number.chapter-active {
   font-size: 0.98rem;
   z-index: 100;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.3s ease;
   background: none;
   border: none;
@@ -468,6 +605,7 @@ ul.leaders li.faded .chapter-number.chapter-active {
 
 .back-button.visible {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .back-button:hover {
@@ -483,6 +621,7 @@ ul.leaders li.faded .chapter-number.chapter-active {
   font-size: 0.98rem;
   z-index: 100;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.3s ease;
   background: none;
   border: none;
@@ -492,6 +631,7 @@ ul.leaders li.faded .chapter-number.chapter-active {
 
 .scroll-top-button.visible {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .scroll-top-button:hover {
@@ -511,7 +651,7 @@ ul.leaders li.faded .chapter-number.chapter-active {
   top: 1rem;
   right: 1rem;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 0.72rem;
   z-index: 100;
   background: none;
   border: none;
@@ -531,7 +671,7 @@ ul.leaders li.faded .chapter-number.chapter-active {
 
 @media (max-width: 768px) {
   .language-flag-button {
-    font-size: 1rem;
+    font-size: 0.6rem;
   }
 }
 
@@ -543,6 +683,31 @@ ul.leaders li.faded .chapter-number.chapter-active {
 .project-page-title .project-title {
   padding-left: 0.5em;
   margin-left: -0.5em;
+}
+
+/* Project subtitle - same styling as project title */
+.project-subtitle {
+  font-size: 0.87rem;
+  line-height: 0.85rem;
+  margin-top: 0.1rem;
+  margin-bottom: 4rem;
+  text-align: left;
+}
+
+.project-subtitle a {
+  text-decoration: underline;
+}
+
+.project-subtitle em {
+  font-style: italic;
+}
+
+.project-subtitle strong {
+  font-weight: bold;
+}
+
+.project-subtitle del {
+  text-decoration: line-through;
 }
 
 /* Language selection page specific styles */
@@ -735,11 +900,13 @@ ul.leaders li.faded .chapter-number.chapter-active {
   /* Reduce base font size for mobile */
   html,
   body {
-    font-size: 1.55em;
+    font-size: 1.75em;
   }
 
   .container-centered {
-    padding: 0 0.5rem;
+    --content-width: calc(100vw - 24px);
+    max-width: calc(100vw - 24px);
+    padding: 0;
   }
 
   /* Consistent font size for mobile */
@@ -753,20 +920,26 @@ ul.leaders li.faded .chapter-number.chapter-active {
   }
 
   .body-text {
-    font-size: 0.78rem;
+    font-size: 0.655rem;
     line-height: 1.25;
   }
 
   .body-text p {
-    font-size: 0.78rem;
+    font-size: 0.655rem;
+  }
+
+  /* Quote with smaller margins on mobile */
+  .body-text blockquote {
+    margin: 1.5rem 5%;
+    font-size: 0.655rem;
   }
 
   .chapter-item {
-    font-size: 0.78rem;
+    font-size: 0.936rem;
   }
 
   .chapter-number {
-    font-size: 0.78rem;
+    font-size: 0.936rem;
   }
 
   .project-item {
@@ -829,4 +1002,39 @@ ul.leaders li.faded .chapter-number.chapter-active {
   .project-page-title .project-title {
     display: inline;
   }
+
+  .project-subtitle {
+    text-align: center;
+    font-size: 0.78rem;
+  }
+}
+
+/* Audio player styling - full width and centered */
+audio {
+  width: 100%;
+  max-width: 70%;
+  display: block;
+  margin: 2rem auto;
+}
+
+@media (max-width: 768px) {
+  audio {
+    max-width: 100%;
+  }
+}
+
+/* Safari-specific hover fix for header */
+@supports (-webkit-touch-callout: none) {
+  .header-title-link,
+  .header-subtitle-link {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* Subpage content uses the same container system - no separate width needed */
+
+/* Image caption links should be underlined */
+.image-caption a {
+  text-decoration: underline;
 }

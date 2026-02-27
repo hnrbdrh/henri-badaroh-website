@@ -10,13 +10,13 @@ socialLinks:
     url: https://drive.google.com/file/d/1IeWt8IZtQtFxAEHfRY2Rw4TkRpHnKTMO/edit
 ---
 
-Henri Badaröh (Piratininga,*) é artista visual e escritor tupiniquim. 
+Henri Badaröh é artista visual e escritor brasileiro.
 
 Através de propostas cuir, decoloniais e interseccionais, Henri trabalha os possíveis diálogos entre filme e fotografia, mídias analógicas e digitais, imagem e texto, os continentes americano e europeu.
 
-Mestre em Estudos Fílmicos e Fotográficos pela Universidade de Leiden (2019) e Bacharel em Fotografia pelo Centro Universitário Senac São Paulo (2015), Henri vive e trabalha na Holanda e frequentemente colabora multidisciplinariamente com artistas e publicações de qualquer parte do planeta. Entre os anos de 2019 e 2024, Henri foi co-editor da revista internacional de fotografia Foam Magazine.
+Radicado na Holanda, Henri atua no campo das artes e cultura há muitos anos, colaborando multidisciplinariamente com artistas em publicações e performances ao redor do mundo. Ele também conduziu revisões de portfólio e sessões de mentoria para o Joop Swart Masterclass do World Press Photo, FUTURES Photography, Foam Amsterdam, Fomu Antwerp, e a Royal Academy of Art, Haia (KABK), entre outros. Entre 2019 e 2024, Henri foi co-editor da Foam Magazine, colaborando com artistas proeminentes como Rosana Paulino, Alfredo Jaar, Dana Lixenberg, Sunil Gupta, Miranda July, Ocean Vuong e Frida Orupabo.
 
-*nome nativo do território hoje denominado <em>São Paulo</em>
+Mestre em Estudos Fílmicos e Fotográficos pela Universidade de Leiden (2019) e Bacharel em Fotografia pelo Centro Universitário Senac São Paulo (2015).
 
 **RECURSOS**
 

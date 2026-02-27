@@ -28,7 +28,7 @@ renderer.link = (href, title, text) => {
   return `<a href="${href}" target="_blank" rel="noopener noreferrer"${title ? ` title="${title}"` : ''}>${text}</a>`;
 };
 
-marked.setOptions({ renderer });
+marked.setOptions({ renderer, gfm: true });
 
 // Re-export chapters for backward compatibility
 export { chapters };
@@ -59,6 +59,7 @@ export async function getAllProjects(lang: Language): Promise<Project[]> {
     projects.push({
       metadata: {
         title: data.title,
+        subtitle: data.subtitle ? await marked.parseInline(data.subtitle) : undefined,
         year: data.year,
         chapter: data.chapter,
         slug: folder,
@@ -115,6 +116,7 @@ export async function getProjectBySlug(slug: string, lang: Language): Promise<Pr
   return {
     metadata: {
       title: data.title,
+      subtitle: data.subtitle ? await marked.parseInline(data.subtitle) : undefined,
       year: data.year,
       chapter: data.chapter,
       slug: slug,

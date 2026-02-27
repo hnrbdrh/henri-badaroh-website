@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Screensaver from '@/components/Screensaver'
-import StyleTester from '@/components/StyleTester'
 
 export const metadata: Metadata = {
   title: 'Henri BADARÖH',
   description: 'Portfolio of Henri Badaröh, Brazilian visual artist and writer',
+  icons: {
+    icon: '/favicon.png',
+  },
 }
 
 export default function RootLayout({
@@ -23,7 +25,6 @@ export default function RootLayout({
       <body>
         {children}
         <Screensaver />
-        <StyleTester />
       </body>
     </html>
   )

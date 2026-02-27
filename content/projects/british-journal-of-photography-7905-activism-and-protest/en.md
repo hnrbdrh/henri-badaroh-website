@@ -1,9 +1,16 @@
 ---
 title: "British Journal of Photography #7905 'Activism & Protest'"
+subtitle: "*on* Koral Carballo *for* British Journal of Photography"
 year: "2021"
 chapter: "ii"
 order: 2
 ---
+
+> I wanted to direct my photography towards questioning, towards an alternative narrative to the one imposed by the state in the face of terror.
+>
+> Author Name Surname 
+
+<p class="credit">Featured as writer. First published in <em>BJP 7905</em>, November 2021.</p>
 
 Along the American continent's Atlantic coast, populations have — due to colonialism — become a mix of Native Americans, Africans, and Europeans. In Mexico, however, the myth prevails that Black people are non-existent. It is an idea deeply embedded in the national history, in a country formed by the encounter between the Spanish invaders and the Indigenous peoples. Combining journalism and autoethnography, Mexican artist Koral Carballo explores the Afro-Mexican identity, assembling a visual narrative that reclaims erased histories and creates new and impactful forms of presence and representation.
 

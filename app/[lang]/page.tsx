@@ -14,7 +14,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Lan
     <>
       <BackButton lang={lang} showBackButton={false} showScrollToTop={false} />
       <div className="container-centered min-h-screen page-wrapper" style={{ paddingTop: '14vh', paddingBottom: '3rem' }}>
-        <Header lang={lang} showLanguageFlag={false} />
+        <Header lang={lang} showLanguageFlag={false} isHomepage />
         <main className="page-content">
           <ChapterMenu lang={lang} projectsByChapter={projectsByChapter} />
           <ProjectList projectsByChapter={projectsByChapter} lang={lang} />

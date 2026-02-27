@@ -26,6 +26,9 @@ export default function ChapterMenu({ lang, projectsByChapter }: ChapterMenuProp
     }
   };
 
+  // Text for "(All the projects are ongoing)" in both languages
+  const ongoingText = lang === 'en' ? '(All the projects are ongoing)' : '(Todos os projetos estão em andamento)';
+
   return (
     <nav className="mb-8 hover-group">
       {visibleChapters.map((chapter) => (
@@ -38,6 +41,9 @@ export default function ChapterMenu({ lang, projectsByChapter }: ChapterMenuProp
         >
           <span className="chapter-number">{chapter.id}.</span>
           <span className="chapter-title">{chapter.title[lang].split('. ')[1]}</span>
+          {chapter.id === 'i' && hoveredChapter === 'i' && (
+            <span className="projects-ongoing-text"> {ongoingText}</span>
+          )}
         </div>
       ))}
     </nav>

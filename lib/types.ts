@@ -6,6 +6,7 @@ export type Chapter = 'i' | 'ii' | 'iii' | 'iv' | 'v' | "vi";
 
 export interface ProjectMetadata {
   title: string;
+  subtitle?: string;
   year: string;
   chapter: Chapter;
   slug: string;

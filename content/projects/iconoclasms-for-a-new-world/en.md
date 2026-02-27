@@ -1,5 +1,6 @@
 ---
 title: "Iconoclasms for a New World"
+subtitle: "*with* Mira Bergh, Josefin Zachrisson *at* ArkDes"
 year: "2020"
 chapter: "i"
 order: 2
