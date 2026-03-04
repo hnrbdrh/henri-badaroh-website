@@ -2,14 +2,14 @@
 portrait: /about/henri-badaroeh-marisol-mendez.jpg
 portraitCaption: <em>Fig 1.</em> Retrato por <a target="_blank" rel="noopener noreferrer" href="https://www.marisol-mendez.com">Marisol Mendez</a> (2024)
 socialLinks:
-  - name: E-mail
-    url: mailto:work@henribadaroh.com
   - name: Instagram
     url: https://www.instagram.com/hnrbdrh/
   - name: LinkedIn
-    url: https://www.linkedin.com/in/hnrbdrh/
+    url: https://www.linkedin.com/in/hnrbdrh/?locale=pt_BR
+  - name: E-mail
+    url: mailto:work [arroba] henribadaroh [ponto] com
   - name: CV
-    url: https://drive.google.com/file/d/1IeWt8IZtQtFxAEHfRY2Rw4TkRpHnKTMO/edit
+    url: /about/henri-badaroeh-cv.pdf
 ---
 
 Henri Badaröh é artista visual e escritor brasileiro.

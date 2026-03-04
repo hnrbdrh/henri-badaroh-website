@@ -1,7 +1,7 @@
 ---
-title: "White Associations (Image Examples)"
+title: "VEM AÍ"
 subtitle: "*layout examples*"
-year: "2018"
+year: "2026"
 chapter: "i"
 order: 5
 ---
